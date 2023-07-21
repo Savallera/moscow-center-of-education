@@ -1,0 +1,27 @@
+@import "../vendor/mixins.scss";
+
+.page {
+    min-block-size: 100vb;
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    @supports (block-size: 100dvb) {
+        block-size: 100dvb;
+    }
+
+    @include media(sm) {
+        grid-template-columns: auto 1fr;
+    }
+
+    &__header {
+        @include media(sm) {
+            padding-left: calc((100vi - 1280px) / 2);
+        }
+    }
+
+    &__footer {
+        @include media(sm) {
+            grid-column: 1/-1;
+        }
+    }
+}

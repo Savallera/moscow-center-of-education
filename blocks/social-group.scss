@@ -1,0 +1,36 @@
+.social-group {
+    display: flex;
+
+    &_place_header {
+        justify-content: center;
+        color: var(--main-color);
+        gap: clamp(20px, 4vi, 40px);
+        padding: 20px 10px;
+
+        li {
+            display: flex;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .social-group__link {
+            mask-size: 70%;
+        }
+    }
+
+    &_place_footer {
+        gap: clamp(24px, 5vi, 50px);
+    }
+
+    &__link {
+        display: block;
+        inline-size: clamp(36px, 5vi, 50px);
+        block-size: clamp(36px, 5vi, 50px);
+        text-decoration: none;
+        transition: 0.25s ease-in;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

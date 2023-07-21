@@ -1,0 +1,53 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__link {
+        padding: 10px;
+        display: flex;
+        gap: 20px;
+        text-decoration: none;
+        transition: 0.25s ease-in;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1.25em;
+        font-weight: bold;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.26);
+        }
+
+        &_active {
+            background-color: #ffffff;
+            color: var(--main-color);
+        }
+    }
+    &__icon {
+        inline-size: 24px;
+        block-size: 24px;
+    }
+    &__menu-btn {
+        display: none;
+    }
+    &__login-button {
+        appearance: none;
+        text-decoration: none;
+        min-block-size: 46px;
+        border-radius: 60px;
+        padding: 13px 48px;
+        margin: auto 10px 0;
+        text-align: center;
+        background-color: #fff;
+        line-height: 1;
+        font-size: 1.25em;
+        font-weight: 800;
+        font-style: italic;
+        transition: 0.25s ease-in;
+
+        &:hover {
+            background-color: var(--main-color);
+            color: #fff;
+            outline: 1px solid #fff;
+        }
+    }
+}
