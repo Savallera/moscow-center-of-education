@@ -20,6 +20,7 @@
     }
 
     &__content {
+        min-inline-size: 0;
         padding: 25px 15px;
         display: flex;
         gap: 25px;
@@ -41,8 +42,9 @@
         display: grid;
         gap: 15px;
         margin-block: 25px;
-        grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(17em, 100%), 1fr));
     }
+    // &__section {}
     &__footer {
         @include media(lg) {
             grid-column: 1/-1;

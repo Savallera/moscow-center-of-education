@@ -41,29 +41,23 @@ $breakpoints: (
     }
 }
 
-@mixin scroll-bar($width: 8px, $height: 8px, $bg: var(--g100), $color: var(--primary)) {
-    &::-webkit-scrollbar-button,
-    &::-webkit-resizer {
-        width: $width;
-        height: $height;
-    }
+@mixin scroll-bar($width: 15px, $height: 15px, $bg: #fff, $color: var(--main-color)) {
+    scrollbar-width: $width;
+    scrollbar-color: $color;
 
+    // ширина scrollbar
     &::-webkit-scrollbar {
         width: $width;
-        height: $height;
     }
-
+    // Цвет дорожки
     &::-webkit-scrollbar-track {
         background-color: $bg;
+        border-radius: 10px;
     }
-
+    // Плашка
     &::-webkit-scrollbar-thumb {
         background-color: $color;
-        opacity: 0.54;
-
-        &:hover {
-            opacity: 1;
-        }
+        border-radius: 10px;
     }
 }
 
