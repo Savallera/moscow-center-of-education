@@ -28,6 +28,7 @@
 
         @include media(lg) {
             padding-inline-end: max(15px, calc((100vi - var(--content-inline-size)) / 2));
+            padding-block-end: 100px;
         }
     }
     &__title {
@@ -43,6 +44,10 @@
         gap: 15px;
         margin-block: 25px;
         grid-template-columns: repeat(auto-fill, minmax(min(17em, 100%), 1fr));
+
+        &_size_small {
+            grid-template-columns: repeat(auto-fill, minmax(min(10em, 100%), 1fr));
+        }
     }
     // &__section {}
     &__footer {

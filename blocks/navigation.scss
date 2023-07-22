@@ -23,9 +23,13 @@
         &_active {
             background-color: #ffffff;
             color: var(--main-color);
+
+            .navigation__icon::before {
+                background-color: var(--main-color);
+            }
         }
     }
-    &__icon {
+    &__icon::before {
         inline-size: 24px;
         block-size: 24px;
     }

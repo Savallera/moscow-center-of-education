@@ -13,9 +13,11 @@
 @import url(../blocks/social-group.css);
 @import url(../blocks/content-header.css);
 @import url(../blocks/main-banner.css);
+@import url(../blocks/footer.css);
 
 @import url(../blocks/new-card.css);
 @import url(../blocks/video-card.css);
 @import url(../blocks/player-card.css);
+@import url(../blocks/rating-card.css);
 
-@import url(../blocks/footer.css);
+@import url(../blocks/gallery-item.css);

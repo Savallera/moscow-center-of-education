@@ -1,39 +1,44 @@
 .icon {
-  background-color: currentColor;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-  &_type_home {
-      mask-image: url("../images/home.svg");
-  }
-  &_type_flag {
-      mask-image: url("../images/flag.svg");
-  }
-  &_type_trophey {
-      mask-image: url("../images/trophy.svg");
-  }
-  &_type_calendar {
-      mask-image: url("../images/calendar.svg");
-  }
-  &_type_star {
-      mask-image: url("../images/star.svg");
-  }
-  &_type_video {
-      mask-image: url("../images/video.svg");
-  }
-  &_type_location {
-      mask-image: url("../images/location.svg");
-  }
-  &_type_metro {
-      mask-image: url("../images/metro.svg");
-  }
-  &_type_vk {
-      mask-image: url("../images/vk.svg");
-  }
-  &_type_site {
-      mask-image: url("../images/site.svg");
-  }
-  &_type_tme {
-      mask-image: url("../images/tme.svg");
-  }
+    &::before {
+        content: "";
+        background-color: #fff;
+        display: block;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+    }
+
+    &_type_home::before {
+        mask-image: url("../images/home.svg");
+    }
+    &_type_flag::before {
+        mask-image: url("../images/flag.svg");
+    }
+    &_type_trophey::before {
+        mask-image: url("../images/trophy.svg");
+    }
+    &_type_calendar::before {
+        mask-image: url("../images/calendar.svg");
+    }
+    &_type_star::before {
+        mask-image: url("../images/star.svg");
+    }
+    &_type_video::before {
+        mask-image: url("../images/video.svg");
+    }
+    &_type_location::before {
+        mask-image: url("../images/location.svg");
+    }
+    &_type_metro::before {
+        mask-image: url("../images/metro.svg");
+    }
+    &_type_vk::before {
+        mask-image: url("../images/vk.svg");
+    }
+    &_type_site::before {
+        mask-image: url("../images/site.svg");
+    }
+    &_type_tme::before {
+        mask-image: url("../images/tme.svg");
+    }
 }
