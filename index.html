@@ -69,7 +69,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <a href="./lk" class="navigation__login-button"> Вход в систему </a>
+                        <a href="./lk" class="button navigation__login-button"> Вход в систему </a>
                         <ul class="social-group social-group_place_header">
                             <li>
                                 <a class="social-group__link icon icon_type_vk" href="#0"></a>
@@ -85,14 +85,86 @@
                 </div>
             </header>
             <main class="page__content">
-                <div class="main-banner"></div>
-                <section>
-                    <div class="page__title-block">
-                        <h1 class="page__title">Выберите дисциплину</h1>
-                        <button class="mobile-menu-btn" type="button" aria-label="Скрыть/Открыть меню">
-                            <span></span>
-                        </button>
-                    </div>
+                <!-- Кнопка для мобильного меню -->
+                <header class="content-header">
+                    <button class="content-header__btn" type="button" aria-label="Скрыть/Открыть меню">
+                        <span></span>
+                    </button>
+                </header>
+                <!-- Главный баннер -->
+                <article class="main-banner" aria-label="Московский центр воспитательных практик"></article>
+                <!-- Блок с новостями -->
+                <section class="page__section">
+                    <h2 class="page__title">Новости</h2>
+                    <ul class="page__card-deck">
+                        <li>
+                            <a class="card" href="">
+                                <article class="new-card">
+                                    <img
+                                        class="new-card__image"
+                                        src="./images/news-card__image.jpg"
+                                        alt="Изображение новости"
+                                    />
+                                    <h2 class="new-card__title">
+                                        Завершился четвёртый день отбора на чемпионат Завершился четвёртый день отбора
+                                        на чемпионат
+                                    </h2>
+                                    <p class="new-card__datetime">01.04.2023 | 15:00</p>
+                                </article>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="button" href="">БОЛЬШЕ НОВОСТЕЙ</a>
+                </section>
+                <!-- Блок с видео и трансляциями -->
+                <section class="page__section">
+                    <h2 class="page__title">Видео и трансляции</h2>
+                    <ul class="page__card-deck">
+                        <li>
+                            <a class="card" href="">
+                                <article class="video-card">
+                                    <img
+                                        class="video-card__image"
+                                        src="./images/video-card__image.jpg"
+                                        alt="Изображение трансляции"
+                                    />
+                                    <h2 class="video-card__title">
+                                        ШСЛ по баскетболу. Игра за третье местоШСЛ по баскетболу. Игра за третье
+                                        местоШСЛ по баскетболу. Игра за третье место
+                                    </h2>
+                                    <p class="video-card__datetime">01.04.2023</p>
+                                </article>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- Блок с лучшими игроками -->
+                <section class="page__section">
+                    <h2 class="page__title">Лучшие игроки</h2>
+                    <ul class="page__card-deck">
+                        <li>
+                            <a class="card" href="">
+                                <article class="player-card">
+                                    <div class="player-card__title-block">
+                                        <h2 class="player-card__sport-title">Настольный теннис</h2>
+                                        <span class="player-card__sport-icon sport-icon sport-icon_type_tennis"></span>
+                                    </div>
+                                    <div class="player-card__columns">
+                                        <img
+                                            class="player-card__image"
+                                            src="./images/no-photo.png"
+                                            alt="Изображение игрока"
+                                        />
+                                        <div class="player-card__column">
+                                            <h3 class="player-card__title">Иван Иванов</h3>
+                                            <p class="player-card__text">ШСК “Лидер”</p>
+                                            <p class="player-card__small-text">Школа 282</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
             </main>
             <footer class="footer page__footer">

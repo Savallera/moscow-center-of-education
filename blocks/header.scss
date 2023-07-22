@@ -3,9 +3,7 @@
 .header {
     background-color: var(--main-color);
     display: flex;
-    padding: 10px;
     @include media(lg, max) {
-        padding: 0;
         background-color: transparent;
         position: fixed;
         inset: 0;
@@ -33,9 +31,8 @@
         display: flex;
         flex-direction: column;
         background-color: var(--main-color);
-
+        padding: 10px;
         @include media(lg, max) {
-            padding: 10px;
             position: fixed;
             inset-inline-start: 0;
             inset-block-start: 0;

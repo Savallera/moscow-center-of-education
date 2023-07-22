@@ -1,0 +1,30 @@
+.sport-icon {
+    background-size: contain;
+    background-position: center;
+    &_type {
+        &_badminton {
+            background-image: url(../images/badminton_theme_light.svg);
+        }
+        &_basketball {
+            background-image: url(../images/basketball_theme_light.svg);
+        }
+        &_checkers {
+            background-image: url(../images/checkers_theme_light.svg);
+        }
+        &_cheerleader {
+            background-image: url(../images/cheerleader_theme_light.svg);
+        }
+        &_chess {
+            background-image: url(../images/chess_theme_light.svg);
+        }
+        &_cybersport {
+            background-image: url(../images/cybersport_theme_light.svg);
+        }
+        &_fitness {
+            background-image: url(../images/fitness_theme_light.svg);
+        }
+        &_table-tennis {
+            background-image: url(../images/table-tennis_theme_light.svg);
+        }
+    }
+}

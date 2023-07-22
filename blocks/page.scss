@@ -15,7 +15,7 @@
 
     &__header {
         @include media(lg) {
-            padding-left: max(10px, calc((100vi - var(--content-inline-size)) / 2));
+            padding-inline-start: max(10px, calc((100vi - var(--content-inline-size)) / 2));
         }
     }
 
@@ -26,10 +26,23 @@
         flex-direction: column;
 
         @include media(lg) {
-            padding-right: max(15px, calc((100vi - var(--content-inline-size)) / 2));
+            padding-inline-end: max(15px, calc((100vi - var(--content-inline-size)) / 2));
         }
     }
-
+    &__title {
+        flex: auto;
+        font-family: var(--expand-font-family, sans-serif);
+        font-size: 30px;
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    &__card-deck {
+        display: grid;
+        gap: 15px;
+        margin-block: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(min(20em, 100%), 1fr));
+    }
     &__footer {
         @include media(lg) {
             grid-column: 1/-1;

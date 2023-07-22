@@ -1,3 +1,5 @@
+@import "../vendor/mixins.scss";
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -10,6 +12,7 @@
         transition: 0.25s ease-in;
         color: #fff;
         border-radius: 10px;
+        font-family: var(--expand-font-family, sans-serif);
         font-size: var(--main-text-size);
         font-weight: bold;
 
@@ -30,24 +33,17 @@
         display: none;
     }
     &__login-button {
-        appearance: none;
-        text-decoration: none;
         min-block-size: 46px;
         border-radius: 60px;
         padding: 13px 26px;
         margin: auto 10px 0;
-        text-align: center;
-        background-color: #fff;
-        line-height: 1;
-        font-size: var(--main-text-size);
-        font-weight: 800;
-        font-style: italic;
-        transition: 0.25s ease-in;
 
         &:hover {
-            background-color: var(--main-color);
-            color: #fff;
             outline: 1px solid #fff;
+        }
+
+        @include media(lg) {
+            margin: 100px 10px 0;
         }
     }
 }
