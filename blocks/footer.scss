@@ -5,16 +5,16 @@
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
     color: #fff;
 
-    padding: 40px 20px;
+    padding: var(--main-gap) 20px;
 
     &__wrapper {
-        max-inline-size: 1280px;
+        max-inline-size: var(--content-inline-size);
         margin: 0 auto;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 40px;
+        gap: var(--main-gap);
 
         @include media(sm, max) {
             flex-direction: column;
@@ -24,7 +24,7 @@
         font-style: normal;
 
         font-weight: 800;
-        font-size: 1.25em;
+        font-size: var(--main-text-size);
 
         display: flex;
         flex-direction: column;
@@ -33,7 +33,7 @@
     &__link {
         display: flex;
         align-items: center;
-        gap: clamp(20px, 4vi, 40px);
+        gap: var(--main-gap);
 
         max-inline-size: max-content;
         text-decoration: none;

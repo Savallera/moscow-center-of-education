@@ -9,18 +9,29 @@
         block-size: 100dvb;
     }
 
-    @include media(sm) {
+    @include media(lg) {
         grid-template-columns: auto 1fr;
     }
 
     &__header {
-        @include media(sm) {
-            padding-left: calc((100vi - 1280px) / 2);
+        @include media(lg) {
+            padding-left: max(10px, calc((100vi - var(--content-inline-size)) / 2));
+        }
+    }
+
+    &__content {
+        padding: 25px 15px;
+        display: flex;
+        gap: 25px;
+        flex-direction: column;
+
+        @include media(lg) {
+            padding-right: max(15px, calc((100vi - var(--content-inline-size)) / 2));
         }
     }
 
     &__footer {
-        @include media(sm) {
+        @include media(lg) {
             grid-column: 1/-1;
         }
     }

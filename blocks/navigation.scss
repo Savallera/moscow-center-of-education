@@ -10,7 +10,7 @@
         transition: 0.25s ease-in;
         color: #fff;
         border-radius: 10px;
-        font-size: 1.25em;
+        font-size: var(--main-text-size);
         font-weight: bold;
 
         &:hover {
@@ -34,12 +34,12 @@
         text-decoration: none;
         min-block-size: 46px;
         border-radius: 60px;
-        padding: 13px 48px;
+        padding: 13px 26px;
         margin: auto 10px 0;
         text-align: center;
         background-color: #fff;
         line-height: 1;
-        font-size: 1.25em;
+        font-size: var(--main-text-size);
         font-weight: 800;
         font-style: italic;
         transition: 0.25s ease-in;

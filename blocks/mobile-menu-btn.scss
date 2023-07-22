@@ -58,7 +58,7 @@
         }
     }
 
-    @include media(sm) {
+    @include media(lg) {
         display: none;
     }
 }

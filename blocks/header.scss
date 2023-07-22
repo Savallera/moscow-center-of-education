@@ -3,7 +3,9 @@
 .header {
     background-color: var(--main-color);
     display: flex;
-    @include media(sm, max) {
+    padding: 10px;
+    @include media(lg, max) {
+        padding: 0;
         background-color: transparent;
         position: fixed;
         inset: 0;
@@ -20,6 +22,7 @@
             opacity: 1;
             pointer-events: all;
             transition: visibility 0s, opacity 0.35s;
+            background-color: rgba(0, 0, 0, 0.54);
 
             .header__wrapper {
                 transform: translateX(0%);
@@ -27,12 +30,12 @@
         }
     }
     &__wrapper {
-        padding: 10px;
         display: flex;
         flex-direction: column;
         background-color: var(--main-color);
 
-        @include media(sm, max) {
+        @include media(lg, max) {
+            padding: 10px;
             position: fixed;
             inset-inline-start: 0;
             inset-block-start: 0;

@@ -5,7 +5,7 @@
 }
 
 body {
-  min-inline-size: 375px;
+  min-inline-size: 320px;
   margin: 0;
   font-family: var(--main-font-family, sans-serif);
   font-size: 16px;
