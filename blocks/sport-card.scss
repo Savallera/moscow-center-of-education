@@ -1,0 +1,38 @@
+@import "../vendor/mixins.scss";
+@import "./sport-icon.scss";
+
+.sport-card {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    transition: background-color 0.35s ease-in, color 0.35s ease-in;
+
+    &:hover {
+        background-color: var(--main-color);
+        color: #fff;
+
+        .sport-card__sport-icon {
+          @extend .sport-icon_theme_dark;
+        }
+    }
+
+    &__title {
+        flex: auto;
+        font-family: var(--expand-font-family, sans-serif);
+        font-size: var(--main-text-size);
+        font-style: italic;
+        font-weight: 800;
+        color: currentColor;
+        line-height: 1;
+    }
+    &__sport-icon {
+        flex: none;
+        inline-size: 50px;
+        block-size: 50px;
+    }
+}

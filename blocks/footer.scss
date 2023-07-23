@@ -37,13 +37,13 @@
 
         max-inline-size: max-content;
         text-decoration: none;
-        transition: 0.25s ease-in;
+        transition: opacity 0.25s ease-in;
         cursor: pointer;
         &:hover {
             opacity: 0.8;
         }
     }
-    &__icon {
+    &__icon::before {
         inline-size: clamp(24px, 5vi, 50px);
         block-size: clamp(24px, 5vi, 50px);
     }

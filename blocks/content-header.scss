@@ -14,7 +14,7 @@
         inline-size: 40px;
         block-size: 40px;
         cursor: pointer;
-        transition: 0.25s ease-in;
+        transition: opacity 0.25s ease-in;
 
         &:hover {
             opacity: 0.75;

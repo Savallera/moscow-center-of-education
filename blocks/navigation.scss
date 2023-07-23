@@ -9,7 +9,7 @@
         display: flex;
         gap: 20px;
         text-decoration: none;
-        transition: 0.25s ease-in;
+        transition: background-color 0.25s ease-in, color 0.25s ease-in;
         color: #fff;
         border-radius: 10px;
         font-family: var(--expand-font-family, sans-serif);
