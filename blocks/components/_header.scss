@@ -1,5 +1,3 @@
-@import "../vendor/mixins.scss";
-
 .header {
     background-color: var(--main-color);
     @include media(lg, max) {

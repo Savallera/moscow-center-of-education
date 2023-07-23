@@ -1,5 +1,3 @@
-@import "../vendor/mixins.scss";
-
 .content-header {
     @include media(lg) {
         display: none;

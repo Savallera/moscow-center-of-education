@@ -1,12 +1,9 @@
-@import "../vendor/mixins.scss";
-
 .rating-card {
     padding: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff;
-    border-radius: 10px;
+    @extend %card-style;
 
     &__title-block {
         display: flex;
@@ -32,11 +29,7 @@
     &__title {
         text-align: right;
         flex: auto;
-        font-family: var(--expand-font-family, sans-serif);
-        font-size: var(--main-text-size);
-        font-style: italic;
-        font-weight: 800;
-        line-height: 1;
+        @extend %main-italic-text;
     }
 
     &__item-image-container {
@@ -71,7 +64,6 @@
     }
 
     &__list {
-        float: auto;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -84,6 +76,7 @@
         color: #fff;
 
         display: flex;
+        align-items: center;
         gap: 15px;
     }
 
@@ -94,16 +87,12 @@
     }
 
     &__item-title {
-        font-family: var(--expand-font-family, sans-serif);
-        font-size: var(--main-text-size);
+        @extend %main-text;
         font-weight: 800;
-        line-height: initial;
     }
 
     &__item-text {
-        font-size: var(--small-text-size);
-        font-weight: bold;
-        line-height: 1;
+        @extend %small-caption-text;
         opacity: 0.5;
     }
 }

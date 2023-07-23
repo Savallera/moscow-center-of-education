@@ -1,5 +1,3 @@
-@import "../vendor/mixins.scss";
-
 .page {
     min-block-size: 100vb;
     display: grid;
@@ -31,14 +29,12 @@
             padding-block-end: 100px;
         }
     }
+
     &__title {
         flex: auto;
-        font-family: var(--expand-font-family, sans-serif);
-        font-size: 30px;
-        line-height: 1;
-        font-weight: 800;
-        text-transform: uppercase;
+        @extend %title;
     }
+
     &__card-deck {
         display: grid;
         gap: 15px;
@@ -47,10 +43,14 @@
         &_size_small {
             grid-template-columns: repeat(auto-fill, minmax(min(10em, 100%), 1fr));
         }
+        &_size_large {
+            grid-template-columns: repeat(auto-fill, minmax(min(25em, 100%), 1fr));
+        }
         &_size_exlarge {
             grid-template-columns: repeat(auto-fill, minmax(min(40em, 100%), 1fr));
         }
     }
+
     &__section {
         display: flex;
         flex-direction: column;
@@ -58,13 +58,8 @@
     }
 
     &__card {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
         padding: 15px 20px;
-        border-radius: 10px;
-        background-color: #fff;
+        @extend %card-style;
     }
 
     &__footer {

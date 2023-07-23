@@ -1,0 +1,36 @@
+@import url(../vendor/globals.css);
+@import url(../fonts/fonts.css);
+@import url(../vendor/variables.css);
+
+@import "../vendor/mixins";
+@import "../vendor/extends";
+
+@import "../blocks/UI/icon";
+@import "../blocks/UI/sport-icon";
+@import "../blocks/UI/button";
+@import "../blocks/UI/card-link";
+
+@import "../blocks/components/scrolling-wrapper";
+@import "../blocks/components/chip-container";
+@import "../blocks/components/tabs";
+@import "../blocks/components/accordion";
+
+@import "../blocks/components/page";
+@import "../blocks/components/header";
+@import "../blocks/components/navigation";
+@import "../blocks/components/social-group";
+@import "../blocks/components/content-header";
+@import "../blocks/components/main-banner";
+@import "../blocks/components/footer";
+
+@import "../blocks/components/events-container";
+
+@import "../blocks/components/new-card";
+@import "../blocks/components/video-card";
+@import "../blocks/components/player-card";
+@import "../blocks/components/rating-card";
+@import "../blocks/components/sport-card";
+@import "../blocks/components/event-card";
+@import "../blocks/components/event-info-item";
+
+@import "../blocks/components/gallery-item";

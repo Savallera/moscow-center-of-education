@@ -1,5 +1,3 @@
-@import "../vendor/mixins.scss";
-
 .events-container {
     @include media(sm) {
         display: grid;

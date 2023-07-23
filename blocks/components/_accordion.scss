@@ -1,6 +1,5 @@
 .accordion {
-    border-radius: 10px;
-    background-color: #fff;
+    @extend %card-style;
 
     &_open {
         .accordion__caption {
