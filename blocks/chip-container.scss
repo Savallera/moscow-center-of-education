@@ -1,0 +1,27 @@
+.chip-container {
+    flex: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    &__item {
+        text-decoration: none;
+        font-family: var(--expand-font-family, sans-serif);
+        font-size: var(--small-text-size);
+        font-style: italic;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1;
+
+        display: flex;
+        align-items: start;
+        gap: 15px;
+        padding: 8px 10px;
+        background-color: var(--main-color);
+        border-radius: 10px;
+    }
+
+    &__icon {
+        inline-size: 15px;
+        block-size: 15px;
+    }
+}

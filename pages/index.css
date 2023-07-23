@@ -6,6 +6,9 @@
 @import url(../blocks/button.css);
 @import url(../blocks/card.css);
 @import url(../blocks/scrolling-wrapper.css);
+@import url(../blocks/chip-container.css);
+@import url(../blocks/tabs.css);
+@import url(../blocks/accordion.css);
 
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
@@ -15,10 +18,13 @@
 @import url(../blocks/main-banner.css);
 @import url(../blocks/footer.css);
 
+@import url(../blocks/events-container.css);
+
 @import url(../blocks/new-card.css);
 @import url(../blocks/video-card.css);
 @import url(../blocks/player-card.css);
 @import url(../blocks/rating-card.css);
 @import url(../blocks/sport-card.css);
+@import url(../blocks/event-card.css);
 
 @import url(../blocks/gallery-item.css);

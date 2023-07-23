@@ -18,4 +18,12 @@
         background-color: var(--main-color);
         color: #fff;
     }
+
+    &_size_small {
+        font-size: var(--small-text-size);
+    }
+
+    &_theme_grey {
+        background-color: var(--grey-color);
+    }
 }

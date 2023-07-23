@@ -14,11 +14,17 @@
     &_type_flag::before {
         mask-image: url("../images/flag.svg");
     }
+    &_type_flag-variant::before {
+        mask-image: url("../images/flag-variant.svg");
+    }
     &_type_trophey::before {
         mask-image: url("../images/trophy.svg");
     }
     &_type_calendar::before {
         mask-image: url("../images/calendar.svg");
+    }
+    &_type_calendar-variant::before {
+        mask-image: url("../images/calendar-variant.svg");
     }
     &_type_star::before {
         mask-image: url("../images/star.svg");
@@ -31,6 +37,21 @@
     }
     &_type_metro::before {
         mask-image: url("../images/metro.svg");
+    }
+    &_type_arrow-up::before {
+        mask-image: url("../images/arrow-up.svg");
+    }
+    &_type_email::before {
+        mask-image: url("../images/email.svg");
+    }
+    &_type_phone::before {
+        mask-image: url("../images/phone.svg");
+    }
+    &_type_document::before {
+        mask-image: url("../images/document.svg");
+    }
+    &_type_plus::before {
+        mask-image: url("../images/plus.svg");
     }
     &_type_vk::before {
         mask-image: url("../images/vk.svg");

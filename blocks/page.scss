@@ -42,14 +42,31 @@
     &__card-deck {
         display: grid;
         gap: 15px;
-        margin-block: 25px;
         grid-template-columns: repeat(auto-fill, minmax(min(17em, 100%), 1fr));
 
         &_size_small {
             grid-template-columns: repeat(auto-fill, minmax(min(10em, 100%), 1fr));
         }
+        &_size_exlarge {
+            grid-template-columns: repeat(auto-fill, minmax(min(40em, 100%), 1fr));
+        }
     }
-    // &__section {}
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
     &__footer {
         @include media(lg) {
             grid-column: 1/-1;

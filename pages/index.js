@@ -21,3 +21,19 @@ mobileMenu.addEventListener("click", (evt) => {
         mobileMenuClose();
     }
 });
+
+const accordionBtn = document.querySelector(".accordion__button");
+const accordionContainer = accordionBtn.closest(".accordion");
+const accordionOpen = () => {
+    accordionContainer.classList.add("accordion_open");
+};
+const accordionClose = () => {
+    accordionContainer.classList.remove("accordion_open");
+};
+accordionBtn.addEventListener("click", () => {
+    if (accordionContainer.classList.contains("accordion_open")) {
+        accordionClose();
+    } else {
+        accordionOpen();
+    }
+});

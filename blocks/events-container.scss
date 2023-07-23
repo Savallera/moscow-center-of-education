@@ -1,0 +1,40 @@
+@import "../vendor/mixins.scss";
+
+.events-container {
+    @include media(sm) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+
+    &__list {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+
+        &:not(:only-child):first-child {
+            padding-block-end: 20px;
+            border-block-end: 1px solid var(--grey-color);
+
+            @include media(sm) {
+                &:not(:only-child):first-child {
+                    padding: 0;
+                    border: none;
+                    padding-inline-end: 20px;
+                    border-inline-end: 1px solid var(--grey-color);
+                }
+            }
+        }
+        &:not(:only-child, :first-child) {
+            padding-block-start: 20px;
+            border-block-start: 1px solid var(--grey-color);
+            @include media(sm) {
+                &:not(:only-child, :first-child) {
+                    padding: 0;
+                    border: none;
+                    padding-inline-start: 20px;
+                    border-inline-start: 1px solid var(--grey-color);
+                }
+            }
+        }
+    }
+}

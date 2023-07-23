@@ -1,0 +1,41 @@
+@import "../vendor/mixins.scss";
+
+.event-card {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+
+    &__icon {
+        display: none;
+
+        @include media(sm) {
+            display: initial;
+            flex: none;
+            min-inline-size: 66px;
+            max-inline-size: 66px;
+            border-radius: 10px;
+            background-color: var(--main-color);
+
+            &::before {
+                background-color: #fff;
+                inline-size: 66px;
+                block-size: 66px;
+                mask-size: 50%;
+            }
+        }
+    }
+
+    &__content {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__title {
+        font-family: var(--expand-font-family, sans-serif);
+        font-size: var(--main-text-size);
+        font-weight: bold;
+        line-height: 1;
+    }
+}
