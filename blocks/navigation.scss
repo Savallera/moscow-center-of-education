@@ -47,7 +47,7 @@
         }
 
         @include media(lg) {
-            margin: 100px 10px 0;
+            margin-block-start: clamp(40px, 10vb, 100px);
         }
     }
 }

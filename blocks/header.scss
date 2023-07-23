@@ -2,7 +2,6 @@
 
 .header {
     background-color: var(--main-color);
-    display: flex;
     @include media(lg, max) {
         background-color: transparent;
         position: fixed;
@@ -28,6 +27,9 @@
         }
     }
     &__wrapper {
+        position: sticky;
+        inset-block-start: 0;
+
         display: flex;
         flex-direction: column;
         background-color: var(--main-color);
@@ -35,7 +37,6 @@
         @include media(lg, max) {
             position: fixed;
             inset-inline-start: 0;
-            inset-block-start: 0;
             inset-block-end: 0;
             z-index: 1000;
             box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
