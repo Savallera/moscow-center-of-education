@@ -424,12 +424,15 @@
   gap: 20px;
   position: relative;
   z-index: 2;
-  cursor: default;
+  cursor: pointer;
+}
+.select-field__field:hover {
+  opacity: 0.75;
 }
 .select-field__icon {
   min-inline-size: 20px;
   max-inline-size: 20px;
-  cursor: pointer;
+  cursor: inherit;
 }
 .select-field__icon::before {
   inline-size: 20px;
@@ -437,9 +440,6 @@
   background-color: var(--main-text-color);
   -webkit-mask-size: 60%;
           mask-size: 60%;
-}
-.select-field__icon:hover {
-  opacity: 0.75;
 }
 .select-field__icon:active {
   transform: translateY(1px);
@@ -570,9 +570,13 @@
 .accordion_open .accordion__caption {
   border-color: var(--grey-color);
 }
+.accordion_open .accordion__button {
+  background-color: var(--main-color);
+}
 .accordion_open .accordion__button::before {
   -webkit-mask-image: url(../images/arrow-up.svg);
           mask-image: url(../images/arrow-up.svg);
+  background-color: #fff;
   -webkit-mask-size: 40%;
           mask-size: 40%;
 }
@@ -1013,6 +1017,34 @@
   }
 }
 
+.calendar-container {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  gap: 25px;
+}
+.calendar-container__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 376px;
+  padding-inline-end: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 15px;
+  scrollbar-color: var(--main-color);
+  scroll-snap-type: x mandatory;
+}
+.calendar-container__list::-webkit-scrollbar {
+  width: 15px;
+}
+.calendar-container__list::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 10px;
+}
+.calendar-container__list::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
 .new-card {
   position: relative;
   z-index: 1;
@@ -1209,6 +1241,13 @@
 .sport-card:hover {
   background-color: var(--main-color);
   color: #fff;
+}
+.sport-card_place_calendar {
+  padding: 10px;
+}
+.sport-card_place_calendar .sport-card__sport-icon {
+  inline-size: 30px;
+  block-size: 30px;
 }
 .sport-card__title {
   flex: auto;

@@ -27,38 +27,38 @@ mobileMenu.addEventListener("click", (evt) => {
 
 // Аккордион
 
-const accordionBtn = document.querySelector(".accordion__button");
-const accordionContainer = accordionBtn.closest(".accordion");
-const accordionOpen = () => {
-    accordionContainer.classList.add("accordion_open");
+const accordionContainers = document.querySelectorAll(".accordion");
+const accordionOpen = (container) => {
+    container.classList.add("accordion_open");
 };
-const accordionClose = () => {
-    accordionContainer.classList.remove("accordion_open");
+const accordionClose = (container) => {
+    container.classList.remove("accordion_open");
 };
-accordionBtn.addEventListener("click", () => {
-    if (accordionContainer.classList.contains("accordion_open")) {
-        accordionClose();
-    } else {
-        accordionOpen();
-    }
+accordionContainers.forEach((item) => {
+    item.querySelector(".accordion__button").addEventListener("click", () => {
+        if (item.classList.contains("accordion_open")) {
+            accordionClose(item);
+        } else {
+            accordionOpen(item);
+        }
+    });
 });
-
 
 // Селект
 
-const selectContainer = document.querySelector(".select-field");
-const selectorField = selectContainer.querySelector(".select-field__field");
-const selectorList = selectContainer.querySelector(".select-field__list");
-const selectListOpen = () => {
-    selectContainer.classList.add("select-field_open");
+const selectContainers = document.querySelectorAll(".select-field");
+const selectListOpen = (container) => {
+    container.classList.add("select-field_open");
 };
-const selectListClose = () => {
-    selectContainer.classList.remove("select-field_open");
+const selectListClose = (container) => {
+    container.classList.remove("select-field_open");
 };
-selectorField.addEventListener("click", () => {
-    if (selectContainer.classList.contains("select-field_open")) {
-        selectListClose();
-    } else {
-        selectListOpen();
-    }
+selectContainers.forEach((item) => {
+    item.querySelector(".select-field__field").addEventListener("click", () => {
+        if (item.classList.contains("select-field_open")) {
+            selectListClose(item);
+        } else {
+            selectListOpen(item);
+        }
+    });
 });

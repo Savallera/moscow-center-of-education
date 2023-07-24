@@ -16,7 +16,7 @@
         <link rel="icon" href="./favicon/icon.ico" sizes="any" />
         <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="./favicon/mobile-icon.png" />
-        <title>Московский центр воспитания - Соревнования - Выбор дисциплины</title>
+        <title>Московский центр воспитания - Календарь</title>
 
         <link rel="stylesheet" href="./pages/index.css" />
     </head>
@@ -36,7 +36,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./events-step-1.html" class="navigation__link navigation__link_active">
+                                <a href="./events-step-1.html" class="navigation__link">
                                     <span class="navigation__icon icon icon_type_trophey"></span>
                                     Соревнования
                                 </a>
@@ -48,7 +48,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./calendar.html" class="navigation__link">
+                                <a href="./calendar.html" class="navigation__link navigation__link_active">
                                     <span class="navigation__icon icon icon_type_calendar"></span>
                                     Календарь
                                 </a>
@@ -90,241 +90,232 @@
                 </header>
                 <!-- Секция с выбором дисциплины -->
                 <section class="page__section">
-                    <h2 class="page__title">Выберите дисциплину</h2>
-                    <ul class="page__card-deck">
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                    <h2 class="page__title">Календарь</h2>
+                    <form class="calendar-container" name="calendar">
+                        <ul class="calendar-container__list">
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Бадминтон</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_badminton"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Баскетбол</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_basketball"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Волейбол</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_volleyball"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Гандбол</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_handball"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Гимнастика</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_gymnastics"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Гольф</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_golf"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">ГТО</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_gto"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Единоборства</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_single-combat"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Зимние виды спорта</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_winter-sport"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Киберспорт</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_cybersport"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Мини-футбол</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_mini-football"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Настольный теннис</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_table-tennis"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Плавание</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_swimming"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Президентские состязания</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_presidential-contests"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Президентские спортивные игры</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_presidential-games"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Регби</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_rugby"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Соревнования для дошкольников</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_primary-school"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Спартакиада Инваспорта</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_spartakiad-invasport"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Спартакиада “Надежда”</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_spartakiad-hope"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Спортивные конкурсы</h3>
                                     <span
                                         class="sport-card__sport-icon sport-icon sport-icon_type_sport-activities"
                                     ></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Спортивные танцы</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_sport-dance"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Фитнес-аэробика</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_fitness"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Флорбол</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_floorball"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Футбол</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_football"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Черлидинг</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_cheerleader"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Шахматы</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_chess"></span>
                                 </article>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="card-link" href="./events-step-2.html">
-                                <article class="sport-card">
+                            </li>
+                            <li>
+                                <article class="sport-card sport-card_place_calendar">
                                     <h3 class="sport-card__title">Шашки</h3>
                                     <span class="sport-card__sport-icon sport-icon sport-icon_type_checkers"></span>
                                 </article>
-                            </a>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                        <div class="calendar-container__calendar"></div>
+                    </form>
+                    <div class="tabs">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <a class="tabs__item-link tabs__item-link_active" href="#0">Юноши</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="#0">Девушки</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="#0">Смешанные</a>
+                            </li>
+                        </ul>
+                        <div class="tabs__container">
+                            <div class="page__card-deck page__card-deck_size_exlarge">
+                                <div class="accordion">
+                                    <div class="accordion__caption">
+                                        <article class="event-card">
+                                            <span class="event-card__icon icon icon_type_trophey"></span>
+                                            <div class="event-card__content">
+                                                <h3 class="event-card__title">Школьная спортивная лига по футболу</h3>
+                                                <div class="chip-container">
+                                                    <span class="chip-container__item">Январь 2023 - Апрель 2023</span>
+                                                    <span class="chip-container__item">
+                                                        <span
+                                                            class="chip-container__icon sport-icon sport-icon_type_football sport-icon_theme_dark"
+                                                        ></span>
+                                                        Футбол
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <button
+                                            type="button"
+                                            class="accordion__button icon icon_type_plus"
+                                            aria-label="Свернуть/Развернуть"
+                                        ></button>
+                                    </div>
+                                    <div class="accordion__container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
             <footer class="footer page__footer">

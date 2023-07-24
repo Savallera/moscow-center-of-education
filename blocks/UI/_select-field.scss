@@ -39,23 +39,23 @@
         @extend %cut-text;
         position: relative;
         z-index: 2;
-        cursor: default;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 
     &__icon {
         min-inline-size: 20px;
         max-inline-size: 20px;
-        cursor: pointer;
+        cursor: inherit;
 
         &::before {
             inline-size: 20px;
             block-size: 20px;
             background-color: var(--main-text-color);
             mask-size: 60%;
-        }
-
-        &:hover {
-            opacity: 0.75;
         }
 
         &:active {

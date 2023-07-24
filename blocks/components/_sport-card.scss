@@ -17,6 +17,15 @@
         }
     }
 
+    &_place_calendar {
+        padding: 10px;
+
+        .sport-card__sport-icon {
+            inline-size: 30px;
+            block-size: 30px;
+        }
+    }
+
     &__title {
         flex: auto;
         @extend %main-italic-text;

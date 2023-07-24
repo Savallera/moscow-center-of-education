@@ -6,9 +6,14 @@
             border-color: var(--grey-color);
         }
 
-        .accordion__button::before {
-            mask-image: url(../images/arrow-up.svg);
-            mask-size: 40%;
+        .accordion__button {
+            background-color: var(--main-color);
+
+            &::before {
+                mask-image: url(../images/arrow-up.svg);
+                background-color: #fff;
+                mask-size: 40%;
+            }
         }
 
         .accordion__container {
