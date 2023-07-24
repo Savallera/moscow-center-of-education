@@ -24,19 +24,19 @@
   text-overflow: ellipsis;
 }
 
-.event-info-item, .sport-card, .rating-card, .player-card, .page__card, .accordion, .tabs__item-link, .select-field__list, .select-field__field, .button {
+.team-card__rating, .team-card, .event-info-item, .sport-card, .rating-card, .player-card, .page__card, .accordion, .tabs__item-link, .select-field__list, .select-field__field, .button {
   background-color: #fff;
   border-radius: 10px;
 }
 
-.page__title {
+.team-card__rating, .page__title {
   font-size: var(--title-text-size);
   line-height: 1;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.event-info-item__text, .rating-card__item-title, .player-card__text, .player-card__title, .video-card__title, .new-card__title, .footer__address, .navigation__link {
+.team-card__title, .event-info-item__text, .player-card__text, .player-card__title, .video-card__title, .new-card__title, .footer__address, .navigation__link {
   font-size: var(--main-text-size);
   font-weight: bold;
 }
@@ -48,7 +48,7 @@
   line-height: 1;
 }
 
-.event-info-item__title, .rating-card__item-text, .player-card__small-text, .video-card__datetime, .new-card__datetime {
+.team-card__text, .event-info-item__title, .player-card__small-text, .video-card__datetime, .new-card__datetime {
   font-family: var(--condensed-font-family, sans-serif);
   font-size: var(--small-text-size);
   font-weight: bold;
@@ -1176,59 +1176,10 @@
   text-align: right;
   flex: auto;
 }
-.rating-card__item-image-container {
-  position: relative;
-  flex: none;
-  min-inline-size: 50px;
-  max-inline-size: 50px;
-  inline-size: 50px;
-  block-size: 50px;
-}
-.rating-card__item-image {
-  inline-size: 100%;
-  block-size: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-.rating-card__item-rating {
-  position: absolute;
-  inset-inline-start: 50%;
-  inset-block-end: 0;
-  transform: translateX(-50%);
-  inline-size: 16px;
-  block-size: 16px;
-  background-color: #fff;
-  border-radius: 50%;
-  color: var(--main-text-color);
-  font-size: var(--small-text-size);
-  text-align: center;
-}
 .rating-card__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-.rating-card__item {
-  background-color: var(--main-color);
-  border-radius: 10px;
-  padding: 20px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.rating-card__item-content {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.rating-card__item-title {
-  font-weight: 800;
-}
-.rating-card__item-text {
-  opacity: 0.5;
 }
 
 .sport-card {
@@ -1323,6 +1274,72 @@
 .event-info-item__title {
   flex: auto;
 }
+.team-card {
+  background-color: var(--main-color);
+  padding: 15px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  grid-auto-flow: dense;
+  gap: 15px;
+}
+.team-card_content_rating {
+  grid-template-columns: auto 1fr auto;
+}
+.team-card_content_rating .team-card__rating {
+  grid-area: 1/3/2/4;
+}
+.team-card_place_rating .team-card__image {
+  grid-area: 1/1/2/2;
+}
+.team-card_place_rating .team-card__rating {
+  grid-area: 1/1/2/2;
+  align-self: end;
+  justify-self: center;
+  border-radius: 50%;
+  inline-size: 16px;
+  block-size: 16px;
+  font-size: var(--small-text-size);
+}
+.team-card_type_reverse {
+  grid-template-columns: 1fr auto;
+  text-align: right;
+}
+.team-card_type_reverse .team-card__image {
+  order: 1;
+}
+.team-card__image {
+  min-inline-size: 50px;
+  max-inline-size: 50px;
+  inline-size: 50px;
+  block-size: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.team-card__rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  inline-size: clamp(36px, 6vi, 60px);
+  block-size: clamp(36px, 6vi, 60px);
+  color: var(--main-text-color);
+}
+.team-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.team-card__title {
+  font-weight: 800;
+}
+.team-card__text {
+  opacity: 0.5;
+}
+
 .gallery-item {
   inline-size: 100%;
   aspect-ratio: 1/1;
