@@ -51,6 +51,10 @@
         &:hover {
             opacity: 0.75;
         }
+
+        &:active {
+            transform: translateY(1px);
+        }
     }
     &__container {
         padding: 15px;

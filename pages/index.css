@@ -1,7 +1,30 @@
 @import url(../vendor/globals.css);
 @import url(../fonts/fonts.css);
 @import url(../vendor/variables.css);
-.event-info-item, .sport-card, .rating-card, .player-card, .page__card, .accordion, .tabs__item-link, .button {
+.select-field__list {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: visibility 0s 0.35s, opacity 0.35s;
+}
+
+.select-field_open .select-field__list {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+  transition: visibility 0s, opacity 0.35s;
+}
+
+.select-field__field {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.event-info-item, .sport-card, .rating-card, .player-card, .page__card, .accordion, .tabs__item-link, .select-field__list, .select-field__field, .button {
   background-color: #fff;
   border-radius: 10px;
 }
@@ -18,7 +41,7 @@
   font-weight: bold;
 }
 
-.sport-card__title, .rating-card__title, .player-card__sport-title, .tabs__item-link, .button {
+.sport-card__title, .rating-card__title, .player-card__sport-title, .tabs__item-link, .select-field__item, .select-field__field, .button {
   font-size: var(--main-text-size);
   font-style: italic;
   font-weight: 800;
@@ -86,6 +109,10 @@
   -webkit-mask-image: url("../images/location.svg");
           mask-image: url("../images/location.svg");
 }
+.icon_type_info::before {
+  -webkit-mask-image: url("../images/info.svg");
+          mask-image: url("../images/info.svg");
+}
 .icon_type_metro::before {
   -webkit-mask-image: url("../images/metro.svg");
           mask-image: url("../images/metro.svg");
@@ -93,6 +120,14 @@
 .icon_type_arrow-up::before {
   -webkit-mask-image: url("../images/arrow-up.svg");
           mask-image: url("../images/arrow-up.svg");
+}
+.icon_type_arrow-down::before, .select-field_open .select-field__icon::before {
+  -webkit-mask-image: url("../images/arrow-down.svg");
+          mask-image: url("../images/arrow-down.svg");
+}
+.icon_type_arrow-right::before {
+  -webkit-mask-image: url("../images/arrow-right.svg");
+          mask-image: url("../images/arrow-right.svg");
 }
 .icon_type_email::before {
   -webkit-mask-image: url("../images/email.svg");
@@ -360,6 +395,75 @@
   text-decoration: none;
 }
 
+.select-field {
+  position: relative;
+  border-radius: 10px;
+}
+.select-field_open {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.select-field_open .select-field__field {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--main-color);
+  color: #fff;
+}
+.select-field_open .select-field__icon::before {
+  background-color: #fff;
+}
+.select-field_open .select-field__list {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+.select-field__select {
+  display: none;
+}
+.select-field__field {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  cursor: default;
+}
+.select-field__icon {
+  min-inline-size: 20px;
+  max-inline-size: 20px;
+  cursor: pointer;
+}
+.select-field__icon::before {
+  inline-size: 20px;
+  block-size: 20px;
+  background-color: var(--main-text-color);
+  -webkit-mask-size: 60%;
+          mask-size: 60%;
+}
+.select-field__icon:hover {
+  opacity: 0.75;
+}
+.select-field__icon:active {
+  transform: translateY(1px);
+}
+.select-field__list {
+  position: absolute;
+  z-index: 1;
+  inset-inline: 0;
+  inset-block-start: 100%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 20em;
+}
+.select-field__item {
+  cursor: default;
+  padding: 10px;
+}
+.select-field__item:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
 .scrolling-wrapper {
   padding-block-end: 25px;
   display: flex;
@@ -511,11 +615,22 @@
 .accordion__button:hover {
   opacity: 0.75;
 }
+.accordion__button:active {
+  transform: translateY(1px);
+}
 .accordion__container {
   padding: 15px;
   display: none;
   opacity: 0;
   transition: opacity 0.35s ease-in;
+}
+
+.form_type_page-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .page {
@@ -550,9 +665,6 @@
     padding-inline-end: max(15px, (100vi - var(--content-inline-size)) / 2);
     padding-block-end: 100px;
   }
-}
-.page__title {
-  flex: auto;
 }
 .page__card-deck {
   display: grid;

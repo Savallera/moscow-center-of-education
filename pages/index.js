@@ -1,3 +1,5 @@
+// Мобильное меню
+
 const mobileMenuBtn = document.querySelector(".content-header__btn");
 const mobileMenu = document.querySelector(".header");
 const mobileMenuOpen = () => {
@@ -16,11 +18,14 @@ mobileMenuBtn.addEventListener("click", () => {
     }
 });
 // Закрытие окна по нажатию на фон.
+
 mobileMenu.addEventListener("click", (evt) => {
     if (evt.target.classList.contains("header")) {
         mobileMenuClose();
     }
 });
+
+// Аккордион
 
 const accordionBtn = document.querySelector(".accordion__button");
 const accordionContainer = accordionBtn.closest(".accordion");
@@ -35,5 +40,25 @@ accordionBtn.addEventListener("click", () => {
         accordionClose();
     } else {
         accordionOpen();
+    }
+});
+
+
+// Селект
+
+const selectContainer = document.querySelector(".select-field");
+const selectorField = selectContainer.querySelector(".select-field__field");
+const selectorList = selectContainer.querySelector(".select-field__list");
+const selectListOpen = () => {
+    selectContainer.classList.add("select-field_open");
+};
+const selectListClose = () => {
+    selectContainer.classList.remove("select-field_open");
+};
+selectorField.addEventListener("click", () => {
+    if (selectContainer.classList.contains("select-field_open")) {
+        selectListClose();
+    } else {
+        selectListOpen();
     }
 });
