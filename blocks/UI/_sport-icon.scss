@@ -1,173 +1,65 @@
+@mixin sport-icon($type) {
+    &_#{$type} {
+        &::before {
+            background-image: url(../images/#{$type}_theme_light.svg);
+        }
+        &::after {
+            background-image: url(../images/#{$type}_theme_dark.svg);
+            opacity: 0;
+        }
+    }
+}
 .sport-icon {
-    background-size: contain;
-    background-position: center;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        background-size: contain;
+        background-position: center;
+        transition: opacity 0.35s ease-in;
+    }
     &_type {
-        &_badminton {
-            background-image: url(../images/badminton_theme_light.svg);
-        }
-        &_basketball {
-            background-image: url(../images/basketball_theme_light.svg);
-        }
-        &_checkers {
-            background-image: url(../images/checkers_theme_light.svg);
-        }
-        &_cheerleader {
-            background-image: url(../images/cheerleader_theme_light.svg);
-        }
-        &_chess {
-            background-image: url(../images/chess_theme_light.svg);
-        }
-        &_cybersport {
-            background-image: url(../images/cybersport_theme_light.svg);
-        }
-        &_floorball {
-            background-image: url(../images/fitness_theme_light.svg);
-        }
-        &_fitness {
-            background-image: url(../images/floorball_theme_light.svg);
-        }
-        &_football {
-            background-image: url(../images/football_theme_light.svg);
-        }
-        &_golf {
-            background-image: url(../images/golf_theme_light.svg);
-        }
-        &_gto {
-            background-image: url(../images/gto_theme_light.svg);
-        }
-        &_gymnastics {
-            background-image: url(../images/gymnastics_theme_light.svg);
-        }
-        &_handball {
-            background-image: url(../images/handball_theme_light.svg);
-        }
-        &_mini-football {
-            background-image: url(../images/mini-football_theme_light.svg);
-        }
-        &_presidential-contests {
-            background-image: url(../images/presidential-contests_theme_light.svg);
-        }
-        &_presidential-games {
-            background-image: url(../images/presidential-games_theme_light.svg);
-        }
-        &_primary-school {
-            background-image: url(../images/primary-school_theme_light.svg);
-        }
-        &_rugby {
-            background-image: url(../images/rugby_theme_light.svg);
-        }
-        &_single-combat {
-            background-image: url(../images/single-combat_theme_light.svg);
-        }
-        &_spartakiad-hope {
-            background-image: url(../images/spartakiad-hope_theme_light.svg);
-        }
-        &_spartakiad-invasport {
-            background-image: url(../images/spartakiad-invasport_theme_light.svg);
-        }
-        &_sport-activities {
-            background-image: url(../images/sport-activities_theme_light.svg);
-        }
-        &_sport-dance {
-            background-image: url(../images/sport-dance_theme_light.svg);
-        }
-        &_swimming {
-            background-image: url(../images/swimming_theme_light.svg);
-        }
-        &_table-tennis {
-            background-image: url(../images/table-tennis_theme_light.svg);
-        }
-        &_volleyball {
-            background-image: url(../images/volleyball_theme_light.svg);
-        }
-        &_winter-sport {
-            background-image: url(../images/winter-sport_theme_light.svg);
-        }
+        @include sport-icon(badminton);
+        @include sport-icon(basketball);
+        @include sport-icon(checkers);
+        @include sport-icon(cheerleader);
+        @include sport-icon(chess);
+        @include sport-icon(cybersport);
+        @include sport-icon(floorball);
+        @include sport-icon(fitness);
+        @include sport-icon(football);
+        @include sport-icon(golf);
+        @include sport-icon(gto);
+        @include sport-icon(gymnastics);
+        @include sport-icon(handball);
+        @include sport-icon(mini-football);
+        @include sport-icon(presidential-contests);
+        @include sport-icon(presidential-games);
+        @include sport-icon(primary-school);
+        @include sport-icon(rugby);
+        @include sport-icon(single-combat);
+        @include sport-icon(spartakiad-hope);
+        @include sport-icon(spartakiad-invasport);
+        @include sport-icon(sport-activities);
+        @include sport-icon(sport-dance);
+        @include sport-icon(swimming);
+        @include sport-icon(table-tennis);
+        @include sport-icon(volleyball);
+        @include sport-icon(winter-sport);
     }
 
     &_theme_dark {
-        &.sport-icon_type {
-            &_badminton {
-                background-image: url(../images/badminton_theme_dark.svg);
-            }
-            &_basketball {
-                background-image: url(../images/basketball_theme_dark.svg);
-            }
-            &_checkers {
-                background-image: url(../images/checkers_theme_dark.svg);
-            }
-            &_cheerleader {
-                background-image: url(../images/cheerleader_theme_dark.svg);
-            }
-            &_chess {
-                background-image: url(../images/chess_theme_dark.svg);
-            }
-            &_cybersport {
-                background-image: url(../images/cybersport_theme_dark.svg);
-            }
-            &_floorball {
-                background-image: url(../images/fitness_theme_dark.svg);
-            }
-            &_fitness {
-                background-image: url(../images/floorball_theme_dark.svg);
-            }
-            &_football {
-                background-image: url(../images/football_theme_dark.svg);
-            }
-            &_golf {
-                background-image: url(../images/golf_theme_dark.svg);
-            }
-            &_gto {
-                background-image: url(../images/gto_theme_dark.svg);
-            }
-            &_gymnastics {
-                background-image: url(../images/gymnastics_theme_dark.svg);
-            }
-            &_handball {
-                background-image: url(../images/handball_theme_dark.svg);
-            }
-            &_mini-football {
-                background-image: url(../images/mini-football_theme_dark.svg);
-            }
-            &_presidential-contests {
-                background-image: url(../images/presidential-contests_theme_dark.svg);
-            }
-            &_presidential-games {
-                background-image: url(../images/presidential-games_theme_dark.svg);
-            }
-            &_primary-school {
-                background-image: url(../images/primary-school_theme_dark.svg);
-            }
-            &_rugby {
-                background-image: url(../images/rugby_theme_dark.svg);
-            }
-            &_single-combat {
-                background-image: url(../images/single-combat_theme_dark.svg);
-            }
-            &_spartakiad-hope {
-                background-image: url(../images/spartakiad-hope_theme_dark.svg);
-            }
-            &_spartakiad-invasport {
-                background-image: url(../images/spartakiad-invasport_theme_dark.svg);
-            }
-            &_sport-activities {
-                background-image: url(../images/sport-activities_theme_dark.svg);
-            }
-            &_sport-dance {
-                background-image: url(../images/sport-dance_theme_dark.svg);
-            }
-            &_swimming {
-                background-image: url(../images/swimming_theme_dark.svg);
-            }
-            &_table-tennis {
-                background-image: url(../images/table-tennis_theme_dark.svg);
-            }
-            &_volleyball {
-                background-image: url(../images/volleyball_theme_dark.svg);
-            }
-            &_winter-sport {
-                background-image: url(../images/winter-sport_theme_dark.svg);
-            }
+        &::before {
+            opacity: 0;
+        }
+        &::after {
+            opacity: 1;
         }
     }
 }

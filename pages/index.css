@@ -124,170 +124,213 @@
 }
 
 .sport-icon {
+  position: relative;
+}
+.sport-icon::before, .sport-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
   background-size: contain;
   background-position: center;
+  transition: opacity 0.35s ease-in;
 }
-.sport-icon_type_badminton {
+.sport-icon_type_badminton::before {
   background-image: url(../images/badminton_theme_light.svg);
 }
-.sport-icon_type_basketball {
+.sport-icon_type_badminton::after {
+  background-image: url(../images/badminton_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_basketball::before {
   background-image: url(../images/basketball_theme_light.svg);
 }
-.sport-icon_type_checkers {
+.sport-icon_type_basketball::after {
+  background-image: url(../images/basketball_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_checkers::before {
   background-image: url(../images/checkers_theme_light.svg);
 }
-.sport-icon_type_cheerleader {
+.sport-icon_type_checkers::after {
+  background-image: url(../images/checkers_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_cheerleader::before {
   background-image: url(../images/cheerleader_theme_light.svg);
 }
-.sport-icon_type_chess {
+.sport-icon_type_cheerleader::after {
+  background-image: url(../images/cheerleader_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_chess::before {
   background-image: url(../images/chess_theme_light.svg);
 }
-.sport-icon_type_cybersport {
+.sport-icon_type_chess::after {
+  background-image: url(../images/chess_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_cybersport::before {
   background-image: url(../images/cybersport_theme_light.svg);
 }
-.sport-icon_type_floorball {
-  background-image: url(../images/fitness_theme_light.svg);
+.sport-icon_type_cybersport::after {
+  background-image: url(../images/cybersport_theme_dark.svg);
+  opacity: 0;
 }
-.sport-icon_type_fitness {
+.sport-icon_type_floorball::before {
   background-image: url(../images/floorball_theme_light.svg);
 }
-.sport-icon_type_football {
+.sport-icon_type_floorball::after {
+  background-image: url(../images/floorball_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_fitness::before {
+  background-image: url(../images/fitness_theme_light.svg);
+}
+.sport-icon_type_fitness::after {
+  background-image: url(../images/fitness_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_football::before {
   background-image: url(../images/football_theme_light.svg);
 }
-.sport-icon_type_golf {
+.sport-icon_type_football::after {
+  background-image: url(../images/football_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_golf::before {
   background-image: url(../images/golf_theme_light.svg);
 }
-.sport-icon_type_gto {
+.sport-icon_type_golf::after {
+  background-image: url(../images/golf_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_gto::before {
   background-image: url(../images/gto_theme_light.svg);
 }
-.sport-icon_type_gymnastics {
+.sport-icon_type_gto::after {
+  background-image: url(../images/gto_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_gymnastics::before {
   background-image: url(../images/gymnastics_theme_light.svg);
 }
-.sport-icon_type_handball {
+.sport-icon_type_gymnastics::after {
+  background-image: url(../images/gymnastics_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_handball::before {
   background-image: url(../images/handball_theme_light.svg);
 }
-.sport-icon_type_mini-football {
+.sport-icon_type_handball::after {
+  background-image: url(../images/handball_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_mini-football::before {
   background-image: url(../images/mini-football_theme_light.svg);
 }
-.sport-icon_type_presidential-contests {
+.sport-icon_type_mini-football::after {
+  background-image: url(../images/mini-football_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_presidential-contests::before {
   background-image: url(../images/presidential-contests_theme_light.svg);
 }
-.sport-icon_type_presidential-games {
+.sport-icon_type_presidential-contests::after {
+  background-image: url(../images/presidential-contests_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_presidential-games::before {
   background-image: url(../images/presidential-games_theme_light.svg);
 }
-.sport-icon_type_primary-school {
+.sport-icon_type_presidential-games::after {
+  background-image: url(../images/presidential-games_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_primary-school::before {
   background-image: url(../images/primary-school_theme_light.svg);
 }
-.sport-icon_type_rugby {
+.sport-icon_type_primary-school::after {
+  background-image: url(../images/primary-school_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_rugby::before {
   background-image: url(../images/rugby_theme_light.svg);
 }
-.sport-icon_type_single-combat {
+.sport-icon_type_rugby::after {
+  background-image: url(../images/rugby_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_single-combat::before {
   background-image: url(../images/single-combat_theme_light.svg);
 }
-.sport-icon_type_spartakiad-hope {
+.sport-icon_type_single-combat::after {
+  background-image: url(../images/single-combat_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_spartakiad-hope::before {
   background-image: url(../images/spartakiad-hope_theme_light.svg);
 }
-.sport-icon_type_spartakiad-invasport {
+.sport-icon_type_spartakiad-hope::after {
+  background-image: url(../images/spartakiad-hope_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_spartakiad-invasport::before {
   background-image: url(../images/spartakiad-invasport_theme_light.svg);
 }
-.sport-icon_type_sport-activities {
+.sport-icon_type_spartakiad-invasport::after {
+  background-image: url(../images/spartakiad-invasport_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_sport-activities::before {
   background-image: url(../images/sport-activities_theme_light.svg);
 }
-.sport-icon_type_sport-dance {
+.sport-icon_type_sport-activities::after {
+  background-image: url(../images/sport-activities_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_sport-dance::before {
   background-image: url(../images/sport-dance_theme_light.svg);
 }
-.sport-icon_type_swimming {
+.sport-icon_type_sport-dance::after {
+  background-image: url(../images/sport-dance_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_swimming::before {
   background-image: url(../images/swimming_theme_light.svg);
 }
-.sport-icon_type_table-tennis {
+.sport-icon_type_swimming::after {
+  background-image: url(../images/swimming_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_table-tennis::before {
   background-image: url(../images/table-tennis_theme_light.svg);
 }
-.sport-icon_type_volleyball {
+.sport-icon_type_table-tennis::after {
+  background-image: url(../images/table-tennis_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_volleyball::before {
   background-image: url(../images/volleyball_theme_light.svg);
 }
-.sport-icon_type_winter-sport {
+.sport-icon_type_volleyball::after {
+  background-image: url(../images/volleyball_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_type_winter-sport::before {
   background-image: url(../images/winter-sport_theme_light.svg);
 }
-.sport-icon_theme_dark.sport-icon_type_badminton, .sport-card:hover .sport-icon_type_badminton.sport-card__sport-icon {
-  background-image: url(../images/badminton_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_basketball, .sport-card:hover .sport-icon_type_basketball.sport-card__sport-icon {
-  background-image: url(../images/basketball_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_checkers, .sport-card:hover .sport-icon_type_checkers.sport-card__sport-icon {
-  background-image: url(../images/checkers_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_cheerleader, .sport-card:hover .sport-icon_type_cheerleader.sport-card__sport-icon {
-  background-image: url(../images/cheerleader_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_chess, .sport-card:hover .sport-icon_type_chess.sport-card__sport-icon {
-  background-image: url(../images/chess_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_cybersport, .sport-card:hover .sport-icon_type_cybersport.sport-card__sport-icon {
-  background-image: url(../images/cybersport_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_floorball, .sport-card:hover .sport-icon_type_floorball.sport-card__sport-icon {
-  background-image: url(../images/fitness_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_fitness, .sport-card:hover .sport-icon_type_fitness.sport-card__sport-icon {
-  background-image: url(../images/floorball_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_football, .sport-card:hover .sport-icon_type_football.sport-card__sport-icon {
-  background-image: url(../images/football_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_golf, .sport-card:hover .sport-icon_type_golf.sport-card__sport-icon {
-  background-image: url(../images/golf_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_gto, .sport-card:hover .sport-icon_type_gto.sport-card__sport-icon {
-  background-image: url(../images/gto_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_gymnastics, .sport-card:hover .sport-icon_type_gymnastics.sport-card__sport-icon {
-  background-image: url(../images/gymnastics_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_handball, .sport-card:hover .sport-icon_type_handball.sport-card__sport-icon {
-  background-image: url(../images/handball_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_mini-football, .sport-card:hover .sport-icon_type_mini-football.sport-card__sport-icon {
-  background-image: url(../images/mini-football_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_presidential-contests, .sport-card:hover .sport-icon_type_presidential-contests.sport-card__sport-icon {
-  background-image: url(../images/presidential-contests_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_presidential-games, .sport-card:hover .sport-icon_type_presidential-games.sport-card__sport-icon {
-  background-image: url(../images/presidential-games_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_primary-school, .sport-card:hover .sport-icon_type_primary-school.sport-card__sport-icon {
-  background-image: url(../images/primary-school_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_rugby, .sport-card:hover .sport-icon_type_rugby.sport-card__sport-icon {
-  background-image: url(../images/rugby_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_single-combat, .sport-card:hover .sport-icon_type_single-combat.sport-card__sport-icon {
-  background-image: url(../images/single-combat_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_spartakiad-hope, .sport-card:hover .sport-icon_type_spartakiad-hope.sport-card__sport-icon {
-  background-image: url(../images/spartakiad-hope_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_spartakiad-invasport, .sport-card:hover .sport-icon_type_spartakiad-invasport.sport-card__sport-icon {
-  background-image: url(../images/spartakiad-invasport_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_sport-activities, .sport-card:hover .sport-icon_type_sport-activities.sport-card__sport-icon {
-  background-image: url(../images/sport-activities_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_sport-dance, .sport-card:hover .sport-icon_type_sport-dance.sport-card__sport-icon {
-  background-image: url(../images/sport-dance_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_swimming, .sport-card:hover .sport-icon_type_swimming.sport-card__sport-icon {
-  background-image: url(../images/swimming_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_table-tennis, .sport-card:hover .sport-icon_type_table-tennis.sport-card__sport-icon {
-  background-image: url(../images/table-tennis_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_volleyball, .sport-card:hover .sport-icon_type_volleyball.sport-card__sport-icon {
-  background-image: url(../images/volleyball_theme_dark.svg);
-}
-.sport-icon_theme_dark.sport-icon_type_winter-sport, .sport-card:hover .sport-icon_type_winter-sport.sport-card__sport-icon {
+.sport-icon_type_winter-sport::after {
   background-image: url(../images/winter-sport_theme_dark.svg);
+  opacity: 0;
+}
+.sport-icon_theme_dark::before, .sport-card:hover .sport-card__sport-icon::before {
+  opacity: 0;
+}
+.sport-icon_theme_dark::after, .sport-card:hover .sport-card__sport-icon::after {
+  opacity: 1;
 }
 
 .button {
