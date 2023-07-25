@@ -24,7 +24,7 @@
   text-overflow: ellipsis;
 }
 
-.team-card__rating, .team-card, .event-info-item, .sport-card, .rating-card, .player-card, .page__card, .accordion, .tabs__item-link, .select-field__list, .select-field__field, .button {
+.team-card__rating, .team-card, .event-info-item, .sport-card, .rating-card, .player-card, .card_style_image-start, .card_style_image-background, .article__quote, .article__image, .page__card, .accordion, .tabs__item-link, .select-field__list, .select-field__field, .button {
   background-color: #fff;
   border-radius: 10px;
 }
@@ -36,7 +36,7 @@
   text-transform: uppercase;
 }
 
-.team-card__title, .event-info-item__text, .player-card__text, .player-card__title, .video-card__title, .new-card__title, .footer__address, .navigation__link {
+.team-card__title, .event-info-item__text, .player-card__text, .player-card__title, .card__title, .footer__address, .article__quote-author, .article__quote, .article__content, .navigation__link {
   font-size: var(--main-text-size);
   font-weight: bold;
 }
@@ -48,7 +48,7 @@
   line-height: 1;
 }
 
-.team-card__text, .event-info-item__title, .player-card__small-text, .video-card__datetime, .new-card__datetime {
+.team-card__text, .event-info-item__title, .player-card__small-text, .card__datetime, .article__datetime {
   font-family: var(--condensed-font-family, sans-serif);
   font-size: var(--small-text-size);
   font-weight: bold;
@@ -933,6 +933,25 @@
   }
 }
 
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.article__image {
+  inline-size: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.article__quote {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: var(--grey-color);
+}
 .footer {
   background-color: var(--main-color);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
@@ -1045,20 +1064,21 @@
   background-color: var(--main-color);
   border-radius: 10px;
 }
-.new-card {
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card_style_image-background {
   position: relative;
   z-index: 1;
   color: #fff;
-  padding: 15px;
   aspect-ratio: 285/161;
-  border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  padding: 15px;
   justify-content: end;
-  gap: 10px;
 }
-.new-card::after {
+.card_style_image-background::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1067,38 +1087,66 @@
   inline-size: 100%;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 100%);
 }
-.new-card__image {
+.card_style_image-background .card__image {
   position: absolute;
   inset: 0;
   z-index: -2;
-  block-size: 100%;
-  inline-size: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-.new-card__title {
-  max-height: 3em;
+.card_style_image-start {
+  transition: 0.35s ease-in;
+}
+.card_style_image-start:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+@media only screen and (width >= 480px) {
+  .card_style_image-start {
+    flex-direction: row;
+  }
+}
+.card_style_image-start .card__image {
+  block-size: initial;
+  aspect-ratio: 290/177;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@media only screen and (width >= 480px) {
+  .card_style_image-start .card__image {
+    max-width: 50%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    flex-basis: 32.7683615819%;
+  }
+}
+.card_style_image-start .card__content {
+  padding: 20px 20px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media only screen and (width < 480px) {
+  .card_style_image-start .card__content {
+    padding-block-start: 0;
+    padding-inline-start: 20px;
+  }
+}
+.card_style_image-start .card__title {
+  max-height: 6em;
   line-height: 1.5;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.video-card {
-  aspect-ratio: 285/161;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  gap: 10px;
-}
-.video-card__image {
+.card__image {
   block-size: 100%;
   inline-size: 100%;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.video-card__title {
+.card__title {
   max-height: 3em;
   line-height: 1.5;
   display: -webkit-box;
@@ -1347,4 +1395,8 @@
      object-fit: cover;
   border-radius: 10px;
   background-color: var(--main-color);
+}
+
+.item-full-row {
+  grid-column: 1/-1;
 }

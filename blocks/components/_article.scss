@@ -1,0 +1,33 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &__image {
+        @extend %card-style;
+        inline-size: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    &__datetime {
+        @extend %small-caption-text;
+    }
+
+    &__content {
+        @extend %main-text;
+    }
+
+    &__quote {
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @extend %main-text;
+        @extend %card-style;
+        background-color: var(--grey-color);
+    }
+
+    &__quote-author {
+        @extend %main-text;
+    }
+}

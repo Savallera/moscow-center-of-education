@@ -1,0 +1,95 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &_style_image-background {
+        @extend %card-style;
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        aspect-ratio: 285/161;
+        overflow: hidden;
+        padding: 15px;
+
+        justify-content: end;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            block-size: 100%;
+            inline-size: 100%;
+            background-image: linear-gradient(to bottom, #00000000 0%, #000 100%);
+        }
+
+        .card__image {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+        }
+    }
+
+    &_style_image-start {
+        @extend %card-style;
+        transition: 0.35s ease-in;
+
+        &:hover {
+            background-color: var(--main-color);
+            color: #fff;
+        }
+
+        @include media(xs) {
+            flex-direction: row;
+        }
+
+        .card__image {
+            block-size: initial;
+            aspect-ratio: 290/177;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+
+            @include media(xs) {
+                max-width: 50%;
+                border-bottom-left-radius: 10px;
+                border-top-right-radius: 0;
+                flex-basis: calc(290 * 100% / 885);
+            }
+        }
+
+        .card__content {
+            padding: 20px 20px 20px 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 10px;
+
+            @include media(xs, max) {
+                padding-block-start: 0;
+                padding-inline-start: 20px;
+            }
+        }
+
+        .card__title {
+            @include clamp(4);
+        }
+    }
+
+    &__image {
+        block-size: 100%;
+        inline-size: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    &__title {
+        @extend %main-text;
+        @include clamp(2);
+    }
+
+    &__datetime {
+        @extend %small-caption-text;
+    }
+}
