@@ -41,6 +41,12 @@
     &_type_metro::before {
         mask-image: url("../images/metro.svg");
     }
+    &_type_arrow-thin-left::before {
+        mask-image: url("../images/arrow-thin-left.svg");
+    }
+    &_type_arrow-thin-right::before {
+        mask-image: url("../images/arrow-thin-right.svg");
+    }
     &_type_arrow-up::before {
         mask-image: url("../images/arrow-up.svg");
     }

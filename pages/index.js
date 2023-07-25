@@ -62,3 +62,8 @@ selectContainers.forEach((item) => {
         }
     });
 });
+
+// Календарь
+
+const calendarEvents = new Calendar("calendar");
+calendarEvents.selectMonth(null, calendarEvents.currYear, calendarEvents.currMonth);

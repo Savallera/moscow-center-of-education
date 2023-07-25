@@ -46,12 +46,11 @@
 
         .card__image {
             block-size: initial;
-            aspect-ratio: 290/177;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
 
             @include media(xs) {
-                max-width: 50%;
+                max-width: min(18.125em, 50%);
                 border-bottom-left-radius: 10px;
                 border-top-right-radius: 0;
                 flex-basis: calc(290 * 100% / 885);

@@ -2,12 +2,12 @@
     position: relative;
     inline-size: 100%;
     aspect-ratio: 8/5;
-    background: repeat-x center 55% / 120% url(../images/main-banner.jpg);
+    background: repeat-x 10% 75% / 160% url(../images/main-banner.png);
 
     @include media(xs) {
         aspect-ratio: 8/2.5;
-        background-size: 70%;
-        background-position: -15% 27%;
+        background-size: 80%;
+        background-position: 10% 52%;
     }
 
     @include media(md) {

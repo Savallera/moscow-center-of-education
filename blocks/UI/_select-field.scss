@@ -76,10 +76,14 @@
         overflow-y: auto;
         max-height: 20em;
 
+        @include scroll-bar();
+        padding-inline-end: 15px;
+        scroll-snap-type: x mandatory;
+
         @extend %hidden-block;
     }
 
-    &__item {
+    &__text {
         @extend %main-italic-text;
         cursor: default;
         padding: 10px;

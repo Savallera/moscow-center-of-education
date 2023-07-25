@@ -1,0 +1,113 @@
+.calendar {
+    @extend %card-style;
+    padding: clamp(7.5px, 1.5vi, 15px);
+    overflow: hidden;
+
+    &__table {
+        table-layout: fixed;
+        min-width: 100%;
+        max-width: 100%;
+        border-spacing: clamp(5px, 1vi, 10px);
+        border: none;
+    }
+
+    &__head .calendar__day {
+        @extend %main-text;
+        font-weight: 800;
+        text-transform: uppercase;
+        background-color: transparent;
+        block-size: initial;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__row {
+        &_type_caption {
+            text-align: center;
+        }
+    }
+
+    &__caption {
+        @extend %title;
+        text-transform: uppercase;
+    }
+
+    &__thumb {
+        appearance: none;
+        border: none;
+        padding: 0;
+        background-color: var(--main-color);
+        border-radius: 50%;
+        inline-size: 35px;
+        block-size: 35px;
+        display: flex;
+        cursor: pointer;
+
+        &::before {
+            margin: auto;
+            inline-size: 35px;
+            block-size: 35px;
+            mask-size: 40%;
+            background-color: #fff;
+        }
+        &:hover {
+            opacity: 0.75;
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        &:disabled {
+            opacity: 0.26;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        &.icon_type_arrow-thin-right {
+            margin-left: auto;
+        }
+    }
+
+    &__day {
+        @extend %card-style;
+        background-color: var(--grey-color);
+        inline-size: calc(100% / 7);
+        block-size: clamp(36px, 5vi, 50px);
+        @extend %main-text;
+        text-align: center;
+        vertical-align: middle;
+
+        cursor: pointer;
+        transition: background-color 0.25s ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
+
+        // Прошлый/будущий месяц
+        &_not-current {
+            opacity: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        // Сегодня
+        &_today {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        // Выбрано
+        &_selected {
+            background-color: var(--accent-color);
+            color: #fff;
+        }
+
+        // Есть мероприятия
+        &_have_event {
+            background-color: var(--main-color);
+            color: #fff;
+        }
+    }
+}
