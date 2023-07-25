@@ -16,7 +16,7 @@
         <link rel="icon" href="./favicon/icon.ico" sizes="any" />
         <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="./favicon/mobile-icon.png" />
-        <title>Московский центр воспитания - Соревнования - Фестивали</title>
+        <title>Московский центр воспитания - Фото</title>
 
         <link rel="stylesheet" href="./pages/index.css" />
     </head>
@@ -42,7 +42,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./festivals-step-1.html" class="navigation__link navigation__link_active">
+                                <a href="./festivals-step-1.html" class="navigation__link">
                                     <span class="navigation__icon icon icon_type_flag"></span>
                                     Фестивали
                                 </a>
@@ -54,13 +54,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./ratings" class="navigation__link">
+                                <a href="./ratings.html" class="navigation__link">
                                     <span class="navigation__icon icon icon_type_star"></span>
                                     Рейтинги
                                 </a>
                             </li>
                             <li>
-                                <a href="./media" class="navigation__link">
+                                <a href="./media.html" class="navigation__link navigation__link_active">
                                     <span class="navigation__icon icon icon_type_video"></span>
                                     Медиа
                                 </a>
@@ -88,66 +88,58 @@
                         <span></span>
                     </button>
                 </header>
-                <!-- Секция с выбором фестиваля -->
+                <!-- Секция с новостями -->
                 <section class="page__section">
-                    <form class="form form_type_page-section" action="" name="event-list">
-                        <h2 class="page__title">Фестивали</h2>
-                        <div class="select-field">
-                            <select class="select-field__select" name="" id="">
-                                <option value="" selected disabled>Выберите вид спорта</option>
-                                <option value="">Бадминтон</option>
-                                <option value="">Баскетбол</option>
-                                <option value="">Волейбол</option>
-                            </select>
-                            <div class="select-field__field">
-                                Выберите вид спорта
-                                <span class="select-field__icon icon icon_type_arrow-right"></span>
-                            </div>
-                            <ul class="select-field__list">
-                                <li class="select-field__item">Бадминтон</li>
-                                <li class="select-field__item">Баскетбол</li>
-                                <li class="select-field__item">Волейбол</li>
-                            </ul>
-                        </div>
-                    </form>
                     <div class="tabs">
                         <ul class="tabs__list">
                             <li class="tabs__item">
-                                <a class="tabs__item-link tabs__item-link_active" href="#0">Текущие</a>
+                                <a class="tabs__item-link" href="./news.html">Новости</a>
                             </li>
                             <li class="tabs__item">
-                                <a class="tabs__item-link" href="#0">Прошедшие</a>
+                                <a class="tabs__item-link" href="./video.html">Видео</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="./broadcast.html">Трансляции</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link tabs__item-link_active" href="./gallery.html">Фото</a>
                             </li>
                         </ul>
                         <div class="tabs__container">
-                            <div class="page__card-deck page__card-deck_size_exlarge">
-                                <div class="accordion">
-                                    <div class="accordion__caption">
-                                        <article class="event-card">
-                                            <span class="event-card__icon icon icon_type_trophey"></span>
-                                            <div class="event-card__content">
-                                                <h3 class="event-card__title">Фестиваль спорта</h3>
-                                                <div class="chip-container">
-                                                    <span class="chip-container__item">Январь 2023 - Апрель 2023</span>
-                                                    <span class="chip-container__item">
-                                                        <span
-                                                            class="chip-container__icon sport-icon sport-icon_type_mini-football sport-icon_theme_dark"
-                                                        ></span>
-                                                        Мини-футбол
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </article>
-                                        <button
-                                            type="button"
-                                            class="accordion__button icon icon_type_plus"
-                                            aria-label="Свернуть/Развернуть"
-                                        ></button>
-                                    </div>
-                                    <div class="accordion__container"></div>
-                                </div>
-                            </div>
+                            <ul class="page__card-deck page__card-deck_size_small">
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                                <li>
+                                    <img class="gallery-item" src="./images/no-image.png" alt="Изображение фото" />
+                                </li>
+                            </ul>
                         </div>
+                        <a class="button" href="#0">ЗАГРУЗИТЬ ЕЩЁ</a>
                     </div>
                 </section>
             </main>

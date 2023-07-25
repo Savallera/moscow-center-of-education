@@ -16,7 +16,7 @@
         <link rel="icon" href="./favicon/icon.ico" sizes="any" />
         <link rel="icon" href="./favicon/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="./favicon/mobile-icon.png" />
-        <title>Московский центр воспитания - Соревнования - Название мероприятия</title>
+        <title>Московский центр воспитания - Видео</title>
 
         <link rel="stylesheet" href="./pages/index.css" />
     </head>
@@ -36,7 +36,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./events-step-1.html" class="navigation__link navigation__link_active">
+                                <a href="./events-step-1.html" class="navigation__link">
                                     <span class="navigation__icon icon icon_type_trophey"></span>
                                     Соревнования
                                 </a>
@@ -54,13 +54,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="./ratings" class="navigation__link">
+                                <a href="./ratings.html" class="navigation__link">
                                     <span class="navigation__icon icon icon_type_star"></span>
                                     Рейтинги
                                 </a>
                             </li>
                             <li>
-                                <a href="./media" class="navigation__link">
+                                <a href="./media.html" class="navigation__link navigation__link_active">
                                     <span class="navigation__icon icon icon_type_video"></span>
                                     Медиа
                                 </a>
@@ -88,113 +88,119 @@
                         <span></span>
                     </button>
                 </header>
-                <!-- Секция с детальной информацией о мероприятии -->
-                <section class="page__section page__card">
-                    <h2 class="page__title">Школьная спортивная лига по футболу</h2>
-                    <div class="chip-container">
-                        <span class="chip-container__item">Юноши 2010-2011 г.р.</span>
-                        <span class="chip-container__item">Январь 2023 - Апрель 2023</span>
-                        <span class="chip-container__item">
-                            <span
-                                class="chip-container__icon sport-icon sport-icon_type_football sport-icon_theme_dark"
-                            ></span>
-                            Футбол
-                        </span>
-                    </div>
-                    <div class="page__card-deck page__card-deck_size_large">
-                        <div class="event-info-item">
-                            <span class="event-info-item__icon icon icon_type_flag-variant"></span>
-                            <p class="event-info-item__title">Количество этапов</p>
-                            <p class="event-info-item__text">2</p>
-                        </div>
-                        <a href="mailto:RamiDM@edu.mos.ru" class="event-info-item">
-                            <span class="event-info-item__icon icon icon_type_email"></span>
-                            <p class="event-info-item__title">E-mail</p>
-                            <p class="event-info-item__text">RamiDM@edu.mos.ru</p>
-                        </a>
-                        <a href="tel:84953692523" class="event-info-item">
-                            <span class="event-info-item__icon icon icon_type_phone"></span>
-                            <p class="event-info-item__title">Телефон</p>
-                            <p class="event-info-item__text">+74953692523 (доп. 1166)</p>
-                        </a>
-                        <a href="#0" class="event-info-item" target="_blank">
-                            <span class="event-info-item__icon icon icon_type_document"></span>
-                            <p class="event-info-item__text">kartochka-shsk__.docx</p>
-                        </a>
-                        <a href="#0" class="event-info-item" target="_blank">
-                            <span class="event-info-item__icon icon icon_type_document"></span>
-                            <p class="event-info-item__text">Протокол Победный мяч.pdf</p>
-                        </a>
-                        <a href="#0" class="event-info-item" target="_blank">
-                            <span class="event-info-item__icon icon icon_type_document"></span>
-                            <p class="event-info-item__text">Регламент Победный мяч.pdf</p>
-                        </a>
-                    </div>
-                </section>
+                <!-- Секция с новостями -->
                 <section class="page__section">
                     <div class="tabs">
                         <ul class="tabs__list">
                             <li class="tabs__item">
-                                <a class="tabs__item-link tabs__item-link_active" href="#0">
-                                    <span class="tabs__item-icon icon icon_type_calendar-variant"></span>
-                                    Расписание
-                                </a>
+                                <a class="tabs__item-link" href="./news.html">Новости</a>
                             </li>
                             <li class="tabs__item">
-                                <a class="tabs__item-link" href="#0">
-                                    <span class="tabs__item-icon icon icon_type_flag-variant"></span>
-                                    Отборочный этап
-                                </a>
+                                <a class="tabs__item-link tabs__item-link_active" href="./video.html">Видео</a>
                             </li>
                             <li class="tabs__item">
-                                <a class="tabs__item-link" href="#0">
-                                    <span class="tabs__item-icon icon icon_type_flag-variant"></span>
-                                    Финальный этап
-                                </a>
+                                <a class="tabs__item-link" href="./broadcast.html">Трансляции</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="./gallery.html">Фото</a>
                             </li>
                         </ul>
-                        <div class="tabs__container page__card">
-                            <div class="shedule-container">
-                                <ul class="shedule-container__list">
-                                    <li class="shedule-container__item">
-                                        <li class="team-card">
+                        <div class="tabs__container">
+                            <ul class="page__card-deck">
+                                <li class="item-full-row">
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
                                             <img
-                                                class="team-card__image"
-                                                src="./images/no-image.png"
-                                                alt="Изображение школы"
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
                                             />
-                                            <div class="team-card__content">
-                                                <h3 class="team-card__title">ШСК “олимпиец”</h3>
-                                                <p class="team-card__text">Школа</p>
-                                            </div>
-                                        </li>
-                                        <li class="team-card team-card_type_reverse">
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
                                             <img
-                                                class="team-card__image"
-                                                src="./images/no-image.png"
-                                                alt="Изображение школы"
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
                                             />
-                                            <div class="team-card__content">
-                                                <h3 class="team-card__title">ШСК “олимпиец”</h3>
-                                                <p class="team-card__text">Школа</p>
-                                            </div>
-                                        </li>
-                                    </li>
-                                </ul>
-                            </div>
-                            <li class="team-card team-card_content_rating">
-                                <img
-                                    class="team-card__image"
-                                    src="./images/no-image.png"
-                                    alt="Изображение школы"
-                                />
-                                <span class="team-card__rating">1</span>
-                                <div class="team-card__content">
-                                    <h3 class="team-card__title">ШСК “олимпиец”</h3>
-                                    <p class="team-card__text">Школа</p>
-                                </div>
-                            </li>
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
+                                            <img
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
+                                            />
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
+                                            <img
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
+                                            />
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
+                                            <img
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
+                                            />
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
+                                            <img
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
+                                            />
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="card-link" href="./video.html">
+                                        <article class="card">
+                                            <img
+                                                class="card__image"
+                                                src="./images/video-card__big-image.png"
+                                                alt="Большое изображение трансляции"
+                                            />
+                                            <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                                            <p class="card__datetime">01.04.2023</p>
+                                        </article>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+                        <a class="button" href="#0">ЗАГРУЗИТЬ ЕЩЁ</a>
                     </div>
                 </section>
             </main>
