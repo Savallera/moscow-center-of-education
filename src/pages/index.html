@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include("../components/head/head.html", {"title": "Главная"})
+    <body>
+        <div class="page">
+            @@include("../components/header/header.html", {"title": "Главная"})
+            <main class="page__content">
+                @@include("../components/content-header/content-header.html")
+                @@include("../components/main-banner/main-banner.html")
+                @@include("../components/news-section/news-section.html", {"title": "Главная"})
+                @@include("../components/video-section/video-section.html")
+                @@include("../components/player-section/player-section.html")
+                @@include("../components/rating-section/rating-section.html")
+                @@include("../components/gallery-section/gallery-section.html")
+            </main>
+            @@include("../components/footer/footer.html")
+        </div>
+    </body>
+</html>

@@ -1,0 +1,84 @@
+<nav class="navigation @@class">
+    <ul class="navigation__list">
+        <li>
+            @@if (title === "Главная") {
+            <a href="./" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_home"></span>
+                Главная
+            </a>
+            } @@if (title !== "Главная") {
+            <a href="./" class="navigation__link">
+                <span class="navigation__icon icon icon_type_home"></span>
+                Главная
+            </a>
+            }
+        </li>
+        <li>
+            @@if (title === "Соревнования") {
+            <a href="./events-choose-sport.html" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_trophey"></span>
+                Соревнования
+            </a>
+            } @@if (title !== "Соревнования") {
+            <a href="./events-choose-sport.html" class="navigation__link">
+                <span class="navigation__icon icon icon_type_trophey"></span>
+                Соревнования
+            </a>
+            }
+        </li>
+        <li>
+            @@if (title === "Фестивали") {
+            <a href="./festivals" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_flag"></span>
+                Фестивали
+            </a>
+            } @@if (title !== "Фестивали") {
+            <a href="./festivals.html" class="navigation__link">
+                <span class="navigation__icon icon icon_type_flag"></span>
+                Фестивали
+            </a>
+            }
+        </li>
+        <li>
+            @@if (title === "Календарь") {
+            <a href="./calendar.html" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_calendar"></span>
+                Календарь
+            </a>
+            } @@if (title !== "Календарь") {
+            <a href="./calendar.html" class="navigation__link">
+                <span class="navigation__icon icon icon_type_calendar"></span>
+                Календарь
+            </a>
+            }
+        </li>
+        <li>
+            @@if (title === "Рейтинги") {
+            <a href="./ratings.html" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_star"></span>
+                Рейтинги
+            </a>
+            } @@if (title !== "Рейтинги") {
+            <a href="./ratings.html" class="navigation__link">
+                <span class="navigation__icon icon icon_type_star"></span>
+                Рейтинги
+            </a>
+            }
+        </li>
+        <li>
+            @@if (title === "Медиа") {
+            <a href="./news.html" class="navigation__link navigation__link_active">
+                <span class="navigation__icon icon icon_type_video"></span>
+                Медиа
+            </a>
+            } @@if (title !== "Медиа") {
+            <a href="./news.html" class="navigation__link">
+                <span class="navigation__icon icon icon_type_video"></span>
+                Медиа
+            </a>
+            }
+        </li>
+    </ul>
+    <a href="#0" class="button navigation__login-button"> Вход в систему </a>
+    @@include("../social-group/social-group.html", {"class": "social-group_place_header"})
+</nav>

@@ -1,0 +1,74 @@
+<ul class="scrolling-wrapper">
+  @@if (section === 'player') {
+    <li>
+      @@include("../card-link/card-link.html", {
+        "href": "#0",
+        card : {
+            "class": "player-card",
+            "title": "Баскетбол",
+            "icon": "basketball",
+            "image": "https://newtemplate.mossport.ru/data/file/e925902bf4fb3f8e2d6941875e842a6c",
+            'name': 'Акулиничев Сергей Константинович',
+            'team': 'Солнечные лучики',
+            'school': 'ГКОУ КШИ № 1',
+          }
+        })
+    </li>
+    <li>
+      @@include("../card-link/card-link.html", {
+        "href": "#0",
+        card : {
+            "class": "player-card",
+            "title": "Настольный теннис",
+            "icon": "table-tennis",
+            "image": "https://newtemplate.mossport.ru/data/file/a70afabc5f338c701b0eb098647eb48d",
+            'name': 'Андреевская Тамара Витальевна',
+            'team': 'Мастер класс ДО',
+            'school': 'ГАПОУ ПК № 8 им. И.Ф. Павлова',
+          }
+        })
+    </li>
+    <li>
+      @@include("../card-link/card-link.html", {
+        "href": "#0",
+        card : {
+            "class": "player-card",
+            "title": "Фитнесс",
+            "icon": "fitness",
+            "image": "https://newtemplate.mossport.ru/data/file/55a8e5eb8c24ede8cb060e6395e6a030",
+            'name': 'Бессонов Василий Михайлович',
+            'team': 'Волейбол юноши ПСИ22 ГБОУ "Московская международная школа"',
+            'school': 'ГБОУ Школа-интернат № 17',
+          }
+        })
+    </li>
+    <li>
+      @@include("../card-link/card-link.html", {
+        "href": "#0",
+        card : {
+            "class": "player-card",
+            "title": "Плавание",
+            "icon": "swimming",
+            "image": "https://newtemplate.mossport.ru/data/file/1c3013d9663ec22182ca84a268d934dd",
+            'name': 'Галкин Владимир Евгеньевич',
+            'team': 'Волейбол 20062007 ГБОУ Школа № 1811',
+            'school': 'ГБОУ Школа № 1454 "Тимирязевская"',
+          }
+        })
+    </li>
+  }
+  @@if (section === 'rating') {
+    <li>
+      @@include("../rating-card/rating-card.html")
+    </li>
+    <li>
+      @@include("../rating-card/rating-card.html")
+    </li>
+    <li>
+      @@include("../rating-card/rating-card.html")
+    </li>
+    <li>
+      @@include("../rating-card/rating-card.html")
+    </li>
+  }
+</ul>

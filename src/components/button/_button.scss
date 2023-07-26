@@ -1,0 +1,28 @@
+.button {
+    display: block;
+    appearance: none;
+    text-decoration: none;
+    min-block-size: 35px;
+    padding: 8px 20px;
+    text-align: center;
+    font-size: var(--main-text-size);
+    font-style: italic;
+    font-weight: 800;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: background-color 0.25s ease-in, color 0.25s ease-in;
+
+    &:hover {
+        background-color: var(--main-color);
+        color: #fff;
+    }
+
+    &_size_small {
+        font-size: var(--small-text-size);
+    }
+
+    &_theme_grey {
+        background-color: var(--grey-color);
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include("../components/head/head.html", {"title": "Соревнования - Выбор мероприятия"})
+    <body>
+        <div class="page">
+            @@include("../components/header/header.html", {"title": "Соревнования"})
+            <main class="page__content">
+                @@include("../components/content-header/content-header.html")
+                <!-- Секция с выбором мероприятия -->
+                <section class="page__section">
+                    <form class="form form_type_page-section" action="" name="sport-type">
+                        <h2 class="page__title">Мероприятия</h2>
+                        <div class="select-field">
+                            <select class="select-field__select" name="" id="">
+                                <option value="" selected disabled>Выберите вид спорта</option>
+                                <option value="">Бадминтон</option>
+                                <option value="">Баскетбол</option>
+                                <option value="">Волейбол</option>
+                            </select>
+                            <div class="select-field__field">
+                                Выберите вид спорта
+                                <span class="select-field__icon icon icon_type_arrow-right"></span>
+                            </div>
+                            <ul class="select-field__list">
+                                <li><p class="select-field__text">Бадминтон</p></li>
+                                <li><p class="select-field__text">Баскетбол</p></li>
+                                <li><p class="select-field__text">Волейбол</p></li>
+                                <li><p class="select-field__text">Бадминтон</p></li>
+                                <li><p class="select-field__text">Баскетбол</p></li>
+                                <li><p class="select-field__text">Волейбол</p></li>
+                                <li><p class="select-field__text">Бадминтон</p></li>
+                                <li><p class="select-field__text">Баскетбол</p></li>
+                                <li><p class="select-field__text">Волейбол</p></li>
+                            </ul>
+                        </div>
+                    </form>
+                    <div class="tabs">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <a class="tabs__item-link tabs__item-link_active" href="#0">Текущие</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="#0">Прошедшие</a>
+                            </li>
+                        </ul>
+                        <div class="tabs__container">
+                            <div class="page__card-deck page__card-deck_size_exlarge">
+                                <div class="accordion">
+                                    <div class="accordion__caption">
+                                        <article class="event-card">
+                                            <span class="event-card__icon icon icon_type_trophey"></span>
+                                            <div class="event-card__content">
+                                                <h3 class="event-card__title">Школьная спортивная лига по футболу</h3>
+                                                <div class="chip-container">
+                                                    <span class="chip-container__item">Январь 2023 - Апрель 2023</span>
+                                                    <span class="chip-container__item">
+                                                        <span
+                                                            class="chip-container__icon sport-icon sport-icon_type_football sport-icon_theme_dark"
+                                                        ></span>
+                                                        Футбол
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <button
+                                            type="button"
+                                            class="accordion__button icon icon_type_plus"
+                                            aria-label="Свернуть/Развернуть"
+                                        ></button>
+                                    </div>
+                                    <div class="accordion__container">
+                                        <div class="events-container">
+                                            <ul class="events-container__list">
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Юноши 2010-2011 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Юноши 2011-2012 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Юноши 2013-2014 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Юноши 2015-2016 г.р.</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                            <ul class="events-container__list">
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Девушки 2010-2011 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Девушки 2011-2012 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Девушки 2013-2014 г.р.</a
+                                                    >
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        class="button button_size_small button_theme_grey"
+                                                        href="./detail-event.html"
+                                                        >Девушки 2015-2016 г.р.</a
+                                                    >
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include("../components/footer/footer.html")
+        </div>
+    </body>
+</html>

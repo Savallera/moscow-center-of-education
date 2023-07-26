@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include("../components/head/head.html", {"title": "Календарь"})
+    <body>
+        <div class="page">
+            @@include("../components/header/header.html", {"title": "Календарь"})
+            <main class="page__content">
+                @@include("../components/content-header/content-header.html")
+                <!-- Секция с выбором дисциплины -->
+                <section class="page__section">
+                    <h2 class="page__title">Календарь</h2>
+                    @@include("../components/calendar-container/calendar-container.html")
+                    <div class="tabs">
+                        <ul class="tabs__list">
+                            <li class="tabs__item">
+                                <a class="tabs__item-link tabs__item-link_active" href="#0">Юноши</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="#0">Девушки</a>
+                            </li>
+                            <li class="tabs__item">
+                                <a class="tabs__item-link" href="#0">Смешанные</a>
+                            </li>
+                        </ul>
+                        <div class="tabs__container">
+                            <div class="page__card-deck page__card-deck_size_exlarge">
+                                <div class="accordion">
+                                    <div class="accordion__caption">
+                                        <article class="event-card">
+                                            <span class="event-card__icon icon icon_type_trophey"></span>
+                                            <div class="event-card__content">
+                                                <h3 class="event-card__title">Школьная спортивная лига по футболу</h3>
+                                                <div class="chip-container">
+                                                    <span class="chip-container__item">Январь 2023 - Апрель 2023</span>
+                                                    <span class="chip-container__item">
+                                                        <span
+                                                            class="chip-container__icon sport-icon sport-icon_type_football sport-icon_theme_dark"
+                                                        ></span>
+                                                        Футбол
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <button
+                                            type="button"
+                                            class="accordion__button icon icon_type_plus"
+                                            aria-label="Свернуть/Развернуть"
+                                        ></button>
+                                    </div>
+                                    <div class="accordion__container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include("../components/footer/footer.html")
+        </div>
+    </body>
+</html>

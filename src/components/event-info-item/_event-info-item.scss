@@ -1,0 +1,35 @@
+.event-info-item {
+    border-radius: 10px;
+    background-color: var(--grey-color);
+    padding: 15px;
+
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-decoration: none;
+
+    @include media(xs, max) {
+        flex-wrap: wrap;
+    }
+
+    &__icon {
+        flex: none;
+				min-inline-size: 20px;
+				max-inline-size: 20px;
+
+        &::before {
+            inline-size: 20px;
+            block-size: 20px;
+            background-color: var(--main-color);
+        }
+    }
+
+    &__title {
+        flex: auto;
+        @extend %small-caption-text;
+    }
+
+    &__text {
+        @extend %main-text;
+    }
+}

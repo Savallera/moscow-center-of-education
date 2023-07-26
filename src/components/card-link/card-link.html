@@ -1,0 +1,21 @@
+<a class="card-link" href="@@href">
+    @@if (card.class === "card card_style_image-background"
+      || card.class === "card") {
+      @@include("../card/card.html", {
+        "class": '@@card.class',
+        'title': '@@card.title',
+        'datetime': '@@card.datetime',
+        'image': '@@card.image',
+      })
+    }
+    @@if (card.class === "player-card") {
+    @@include("../player-card/player-card.html", {
+      'title': '@@card.title',
+      'icon': '@@card.icon',
+      'image': '@@card.image',
+      'name': '@@card.name',
+      'team': '@@card.team',
+      'school': '@@card.school',
+    })
+  }
+</a>
