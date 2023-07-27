@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include("../components/head/head.html", { "title": "В столице подвели итоги спортивных соревнований среди работников образовательных организаций" })
+    @@include("../components/head/head.html", { "title": "Новости" })
     <body>
         <div class="page">
             @@include("../components/header/header.html", {"title": "Медиа"})
             <main class="page__content">
                 @@include("../components/content-header/content-header.html")
-                @@include("../components/news-section/news-section.html", {"title": "Медиа"})
+                <!-- Секция с новостями на странице Новости -->
+                <section class="page__section">
+                    @@include('../components/tabs/tabs-media.html', {"title": "Новости"})
+                </section>
             </main>
             @@include("../components/footer/footer.html")
         </div>

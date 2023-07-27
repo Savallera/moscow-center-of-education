@@ -1,4 +1,3 @@
-@@if (title === 'Главная') {
 <!-- Блок с новостями на Главной -->
 <section class="page__section">
     <h2 class="page__title">Новости</h2>
@@ -36,17 +35,3 @@
     </ul>
     <a class="button" href="./news.html">БОЛЬШЕ НОВОСТЕЙ</a>
 </section>
-}
-@@if (title === 'Медиа') {
-<!-- Секция с новостями на странице Новости -->
-<section class="page__section">
-    @@include('../tabs/tabs.html', {
-        'links': {
-            'link': {
-                'name': '',
-                'href': '',
-            }
-        }
-    })
-</section>
-}

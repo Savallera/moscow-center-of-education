@@ -1,0 +1,259 @@
+<div class="tabs">
+    <ul class="tabs__list">
+        <li class="tabs__item">
+            @@if (title === "Новости") {
+            <a class="tabs__item-link tabs__item-link_active" href="./news.html">Новости</a>
+            } @@if (title !== "Новости") {
+            <a class="tabs__item-link" href="./news.html">Новости</a>
+            }
+        </li>
+        <li class="tabs__item">
+            @@if (title === "Видео") {
+            <a class="tabs__item-link tabs__item-link_active" href="./video.html">Видео</a>
+            } @@if (title !== "Видео") {
+            <a class="tabs__item-link" href="./video.html">Видео</a>
+            }
+        </li>
+        <li class="tabs__item">
+            @@if (title === "Трансляции") {
+            <a class="tabs__item-link tabs__item-link_active" href="./broadcast.html">Трансляции</a>
+            } @@if (title !== "Трансляции") {
+            <a class="tabs__item-link" href="./broadcast.html">Трансляции</a>
+            }
+        </li>
+        <li class="tabs__item">
+            @@if (title === "Фото") {
+            <a class="tabs__item-link tabs__item-link_active" href="./gallery.html">Фото</a>
+            } @@if (title !== "Фото") {
+            <a class="tabs__item-link" href="./gallery.html">Фото</a>
+            }
+        </li>
+    </ul>
+    <div class="tabs__container">
+        @@if (title === "Новости") {
+        <ul class="page__card-deck page__card-deck_size_exlarge">
+            <li>
+                <a class="card-link" href="./detail-new.html">
+                    <article class="card card_style_image-start">
+                        <img
+                            class="card__image"
+                            src="https://chekhov.mosreg.ru/files/image/65/95/83/lg!0d9i.jpeg"
+                            alt="Изображение новости"
+                        />
+                        <div class="card__content">
+                            <h2 class="card__title">
+                                Футбольные правила в последние годы активно эволюционируют, но основные положения
+                                остаются относительно неприкосновенными
+                            </h2>
+                            <p class="card__datetime">01.04.2023 | 15:00</p>
+                        </div>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./detail-new.html">
+                    <article class="card card_style_image-start">
+                        <img
+                            class="card__image"
+                            src="https://chekhov.mosreg.ru/files/image/65/95/83/lg!0d9i.jpeg"
+                            alt="Изображение новости"
+                        />
+                        <div class="card__content">
+                            <h2 class="card__title">
+                                Футбольные правила в последние годы активно эволюционируют, но основные положения
+                                остаются относительно неприкосновенными
+                            </h2>
+                            <p class="card__datetime">01.04.2023 | 15:00</p>
+                        </div>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./detail-new.html">
+                    <article class="card card_style_image-start">
+                        <img
+                            class="card__image"
+                            src="https://r1.mt.ru/r17/photoE791/20852960725-0/jpg/bp.jpeg"
+                            alt="Изображение новости"
+                        />
+                        <div class="card__content">
+                            <h2 class="card__title">
+                                Футбольные правила в последние годы активно эволюционируют, но основные положения
+                                остаются относительно неприкосновенными
+                            </h2>
+                            <p class="card__datetime">01.04.2023 | 15:00</p>
+                        </div>
+                    </article>
+                </a>
+            </li>
+        </ul>
+        }
+        @@if (title === "Видео") {
+        <ul class="page__card-deck">
+            <li class="item-full-row">
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Большое изображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img class="card__image" src="./images/video-card__image.jpg" alt="Bзображение трансляции" />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+        </ul>
+        }
+        @@if (title === "Трансляции") {
+        <ul class="page__card-deck">
+            <li class="item-full-row">
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Большое изображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a class="card-link" href="./video.html">
+                    <article class="card">
+                        <img
+                            class="card__image"
+                            src="./images/video-card__image.jpg"
+                            alt="Bзображение трансляции"
+                        />
+                        <h2 class="card__title">ШСЛ по баскетболу. Игра за третье место</h2>
+                        <p class="card__datetime">01.04.2023</p>
+                    </article>
+                </a>
+            </li>
+        </ul>
+        }
+    </div>
+    <a class="button" href="#0">ЗАГРУЗИТЬ ЕЩЁ</a>
+</div>

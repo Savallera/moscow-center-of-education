@@ -188,3 +188,5 @@ Calendar.prototype.addTooltip = function (element) {
         );
     };
 };
+
+export default Calendar;

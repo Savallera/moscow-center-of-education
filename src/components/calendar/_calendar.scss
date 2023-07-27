@@ -70,8 +70,8 @@
     }
 
     &__day {
-        @extend %card-style;
         background-color: var(--grey-color);
+        border-radius: 10px;
         inline-size: calc(100% / 7);
         block-size: clamp(36px, 5vi, 50px);
         @extend %main-text;

@@ -2,7 +2,7 @@
     position: relative;
     inline-size: 100%;
     aspect-ratio: 8/5;
-    background: repeat-x 10% 75% / 160% url(../images/main-banner.png);
+    background: repeat-x 10% 75% / 160% url(../images/main-banner.jpg);
 
     @include media(xs) {
         aspect-ratio: 8/2.5;

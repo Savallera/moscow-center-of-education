@@ -1,4 +1,4 @@
-import "../components/calendar/calendar.js";
+import Calendar from "../components/calendar/calendar.js";
 
 // Мобильное меню
 
@@ -67,5 +67,5 @@ selectContainers.forEach((item) => {
 
 // Календарь
 
-// const calendarEvents = new Calendar("calendar");
-// calendarEvents.selectMonth(null, calendarEvents.currYear, calendarEvents.currMonth);
+const calendarEvents = new Calendar("calendar");
+calendarEvents.selectMonth(null, calendarEvents.currYear, calendarEvents.currMonth);
