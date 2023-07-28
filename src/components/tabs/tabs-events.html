@@ -9,9 +9,30 @@
     </ul>
     <div class="tabs__container">
         <div class="page__card-deck page__card-deck_size_exlarge">
-            @@include("../accordion/accordion-events.html")
-            @@include("../accordion/accordion-events.html")
-            @@include("../accordion/accordion-events.html")
+            @@include('../accordion/accordion-events.html', {
+                'title': 'Школьная спортивная лига по баскетболу 3х3 среди команд девушек 2010-2011 г.р.',
+                'dates': 'январь 2023 - март 2023',
+                'sport': 'Соревнования для дошкольников и начальных классов',
+                'icon': 'primary-school',
+            })
+            @@include('../accordion/accordion-events.html', {
+                'title': 'Фестиваль "Всей семьей на старт"',
+                'dates': 'Январь 2023 - Апрель 2023',
+                'sport': 'Баскетбол',
+                'icon': 'basketball',
+            })
+            @@include('../accordion/accordion-events.html', {
+                'title': 'Школьная спортивная лига по баскетболу "Победный мяч" среди команд девушек и юношей 2012 г.р. и моложе',
+                'dates': 'Январь 2023 - Апрель 2023',
+                'sport': 'Футбол',
+                'icon': 'football',
+            })
+            @@include('../accordion/accordion-events.html', {
+                'title': 'Армрестлинг студенты ОВЗ 1 группа',
+                'dates': 'январь 2023 - январь 2023',
+                'sport': 'Спартакиада Инваспорта',
+                'icon': 'spartakiad-invasport',
+            })
         </div>
     </div>
 </div>

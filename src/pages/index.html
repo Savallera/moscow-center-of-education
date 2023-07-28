@@ -7,11 +7,118 @@
             <main class="page__content">
                 @@include("../components/content-header/content-header.html")
                 @@include("../components/main-banner/main-banner.html")
-                @@include("../components/news-section/news-section.html", {"title": "Главная"})
-                @@include("../components/video-section/video-section.html")
-                @@include("../components/player-section/player-section.html")
-                @@include("../components/rating-section/rating-section.html")
-                @@include("../components/gallery-section/gallery-section.html")
+
+                <!-- Блок с новостями на Главной -->
+                <section class="page__section">
+                    <h2 class="page__title">Новости</h2>
+                    <ul class="page__card-deck">
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./detail-new.html",
+                                card : {
+                                    "class": "card card_style_image-background",
+                                    "title": "«Играли на своем максимуме». Бубнов оценил потенциал «Зенита» после матча с «Ахматом»",
+                                    "datetime": "01.04.2023 | 23:28",
+                                    "image": "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/c6/56/0c2baacb1a3c6786d0e2658e316a09b664c016110affb881975017.jpg" }
+                                })
+                        </li>
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./detail-new.html",
+                                card : {
+                                    "class": "card card_style_image-background",
+                                    "title": "Вяльбе публично унизила лыжниц сборной России. Чего она добивается?",
+                                    "datetime": "25 июля 2023 | 18:58",
+                                    "image": "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/7e/5e/79d59b191996ede84d98442fd4613cb064bfefb9a85c0334410935.jpg" }
+                                })
+                        </li>
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./detail-new.html",
+                                card : {
+                                    "class": "card card_style_image-background",
+                                    "title": "Овечкина оригинально поздравили с уникальным рекордом. Исполнили детскую мечту",
+                                    "datetime": "25 июля 2023 | 21:18",
+                                    "image": "https://s-cdn.sportbox.ru/images/styles/upload/fp_fotos/19/54/a936f17e6b63403a11796d9bb634861464c00ec266ceb774642653.jpg" }
+                                })
+                        </li>
+                    </ul>
+                    <a class="button" href="./news.html">БОЛЬШЕ НОВОСТЕЙ</a>
+                </section>
+
+                <!-- Блок с видео и трансляциями -->
+                <section class="page__section">
+                    <h2 class="page__title">Видео и трансляции</h2>
+                    <ul class="page__card-deck">
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./video.html",
+                                card : {
+                                    "class": "card",
+                                    "title": "ШСЛ по баскетболу. Игра за третье место",
+                                    "datetime": "01.04.2023",
+                                    "image": "./images/video-card__image.jpg" }
+                                })
+                        </li>
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./video.html",
+                                card : {
+                                    "class": "card",
+                                    "title": "ШСЛ по баскетболу. Игра за третье место",
+                                    "datetime": "01.04.2023",
+                                    "image": "./images/video-card__image.jpg" }
+                                })
+                        </li>
+                        <li>
+                            @@include("../components/card-link/card-link.html", {
+                                "href": "./video.html",
+                                card : {
+                                    "class": "card",
+                                    "title": "ШСЛ по баскетболу. Игра за третье место",
+                                    "datetime": "01.04.2023",
+                                    "image": "./images/video-card__image.jpg" }
+                                })
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Блок с лучшими игроками -->
+                <section class="page__section">
+                    <h2 class="page__title">Лучшие игроки</h2>
+                    @@include('../components/scrolling-wrapper/scrolling-wrapper-player.html')
+                </section>
+
+                <!-- Блок с рейтингами -->
+                <section class="page__section">
+                    <h2 class="page__title">Рейтинги</h2>
+                    @@include('../components/scrolling-wrapper/scrolling-wrapper-rating.html')
+                </section>
+
+                <!-- Блок с фото -->
+                <section class="page__section">
+                    <h2 class="page__title">Фото</h2>
+                    <ul class="page__card-deck page__card-deck_size_small">
+                        <li>
+                            @@include('../components/gallery-item/gallery-item.html', {
+                                'image': 'https://r1.mt.ru/r17/photoE791/20852960725-0/jpg/bp.jpeg',
+                                'alt': 'Изображение фото'
+                            })
+                        </li>
+                        <li>
+                            @@include('../components/gallery-item/gallery-item.html', {
+                                'image': 'https://avatars.mds.yandex.net/i?id=6f02d4d3e3f080488f5d272f30ffade9_l-5288174-images-thumbs&ref=rim&n=13&w=1080&h=696',
+                                'alt': 'Изображение фото'
+                            })
+                        </li>
+                        <li>
+                            @@include('../components/gallery-item/gallery-item.html', {
+                                'image': 'https://avatars.dzeninfra.ru/get-zen_doc/9852052/pub_64bc3aa3348b943c46b62cab_64bc3ac8da8d293e7fb755a4/scale_1200',
+                                'alt': 'Изображение фото'
+                            })
+                        </li>
+                    </ul>
+                </section>
             </main>
             @@include("../components/footer/footer.html")
         </div>

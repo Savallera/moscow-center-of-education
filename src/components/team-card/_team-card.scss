@@ -4,11 +4,13 @@
     padding: 15px;
     color: #fff;
 
+    min-inline-size: 0;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     grid-auto-flow: dense;
     gap: 15px;
+
 
     // Содержит третью колонку с рейтингом
     &_content_rating {
@@ -23,10 +25,12 @@
     &_place_rating {
         .team-card__image {
             grid-area: 1/1/2/2;
+            align-self: center;
         }
         .team-card__rating {
             grid-area: 1/1/2/2;
-            align-self: end;
+            margin-top: 34px;
+            align-self: center;
             justify-self: center;
 
             border-radius: 50%;
@@ -77,6 +81,9 @@
     &__title {
         @extend %main-text;
         font-weight: 800;
+
+        // Если название длинное, где вместо пробелов нижние подчеркивания
+        word-break: break-word;
     }
 
     &__text {

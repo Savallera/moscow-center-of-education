@@ -9,7 +9,9 @@
     @include scroll-bar();
     scroll-snap-type: x mandatory;
 
-    & > * {
+    & > li {
+        display: flex;
+
         flex: 0 0 100%;
         min-inline-size: 100%;
         max-inline-size: 100%;
@@ -22,14 +24,6 @@
             flex: 0 0 calc((100% - 30px) / 3);
             min-inline-size: calc((100% - 30px) / 3);
             max-inline-size: calc((100% - 30px) / 3);
-        }
-
-        & > * {
-            block-size: 100%;
-
-            & > * {
-                block-size: 100%;
-            }
         }
     }
 }

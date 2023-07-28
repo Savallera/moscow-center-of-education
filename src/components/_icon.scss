@@ -35,6 +35,9 @@
     &_type_location::before {
         mask-image: url("../images/location.svg");
     }
+    &_type_camera::before {
+        mask-image: url("../images/camera.svg");
+    }
     &_type_info::before {
         mask-image: url("../images/info.svg");
     }

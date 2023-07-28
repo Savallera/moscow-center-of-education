@@ -1,0 +1,57 @@
+.shedule-card {
+    display: grid;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    align-items: center;
+
+    @include media(md) {
+        grid-template-columns: 1fr 200px 1fr;
+    }
+
+    // &__team {}
+
+    &__game-info {
+        justify-self: center;
+        padding: 15px 15px 10px;
+        text-align: center;
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-block-end: 8px;
+    }
+
+    &__icon {
+        @extend %card-style;
+        min-inline-size: 30px;
+        max-inline-size: 30px;
+        block-size: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            inline-size: 16px;
+            block-size: 16px;
+            background-color: var(--main-color);
+        }
+    }
+
+    &__score {
+        padding: 5px 20px;
+        font-size: var(--title-text-size);
+        line-height: 1;
+        font-weight: 800;
+        text-transform: uppercase;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    &__datetime {
+        @extend %small-caption-text;
+        color: #fff;
+    }
+}

@@ -1,5 +1,4 @@
 <ul class="scrolling-wrapper">
-  @@if (section === 'player') {
     <li>
       @@include("../card-link/card-link.html", {
         "href": "#0",
@@ -56,19 +55,4 @@
           }
         })
     </li>
-  }
-  @@if (section === 'rating') {
-    <li>
-      @@include("../rating-card/rating-card.html")
-    </li>
-    <li>
-      @@include("../rating-card/rating-card.html")
-    </li>
-    <li>
-      @@include("../rating-card/rating-card.html")
-    </li>
-    <li>
-      @@include("../rating-card/rating-card.html")
-    </li>
-  }
 </ul>

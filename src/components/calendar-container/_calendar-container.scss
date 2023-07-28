@@ -1,6 +1,6 @@
 .calendar-container {
     display: grid;
-    align-items: start;
+    align-items: flex-start;
     grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
     gap: 25px;
 
