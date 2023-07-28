@@ -1,0 +1,13 @@
+.button-icon {
+    display: block;
+    appearance: none;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in;
+    &:hover {
+        opacity: 0.75;
+    }
+}

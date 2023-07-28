@@ -1,9 +1,16 @@
 .form {
-    &_type_page-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
         gap: 20px;
+        align-items: center;
+
+        &_align_end {
+            margin-inline-start: auto;
+        }
     }
 }

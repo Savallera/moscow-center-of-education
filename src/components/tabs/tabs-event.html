@@ -1,4 +1,4 @@
-<div class="tabs">
+<article class="tabs">
     <ul class="tabs__list">
         <li class="tabs__item">
             @@if(title === 'Расписание') {
@@ -6,8 +6,7 @@
                 <span class="tabs__item-icon icon icon_type_calendar-variant"></span>
                 Расписание
             </a>
-            }
-            @@if(title !== 'Расписание') {
+            } @@if(title !== 'Расписание') {
             <a class="tabs__item-link" href="./detail-event.html">
                 <span class="tabs__item-icon icon icon_type_calendar-variant"></span>
                 Расписание
@@ -20,8 +19,7 @@
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Отборочный этап
             </a>
-            }
-            @@if(title !== 'Отборочный этап') {
+            } @@if(title !== 'Отборочный этап') {
             <a class="tabs__item-link" href="./detail-event-stage.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Отборочный этап
@@ -34,8 +32,7 @@
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Финальный этап
             </a>
-            }
-            @@if(title !== 'Финальный этап') {
+            } @@if(title !== 'Финальный этап') {
             <a class="tabs__item-link" href="./detail-event-final.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Финальный этап
@@ -44,11 +41,17 @@
         </li>
     </ul>
     <div class="tabs__container page__card">
-        <ul class="page__card-deck page__card-deck_size_exlarge">
+        <div class="page__section">
             @@if(title === 'Расписание') {
+            <ul class="page__card-deck page__card-deck_size_exlarge">
                 <li class="shedule-card">
                     <div class="team-card shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">Спортивный клуб " Искра" арм. юноши</h3>
                             <p class="team-card__text">ГБПОУ КСУ № 3</p>
@@ -58,12 +61,20 @@
                         <div class="shedule-card__panel">
                             <span class="shedule-card__icon icon icon_type_camera" aria-label="Просмотр"></span>
                             <p class="shedule-card__score">22&nbsp;:&nbsp;22</p>
-                            <span class="shedule-card__icon icon icon_type_location" aria-label="Место проведения"></span>
+                            <span
+                                class="shedule-card__icon icon icon_type_location"
+                                aria-label="Место проведения"
+                            ></span>
                         </div>
                         <p class="shedule-card__datetime">01.04.2023 | 15:00</p>
                     </div>
                     <div class="team-card team-card_type_reverse shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">ГБПОУ "МКАГ"</h3>
                             <p class="team-card__text">ГБПОУ "МКАГ"</p>
@@ -72,7 +83,12 @@
                 </li>
                 <li class="shedule-card">
                     <div class="team-card shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">ССК "Триумф"_Инваспорт_Армрестлинг_дев</h3>
                             <p class="team-card__text">ГБПОУ ОК "Юго-Запад"</p>
@@ -82,12 +98,20 @@
                         <div class="shedule-card__panel">
                             <span class="shedule-card__icon icon icon_type_camera" aria-label="Просмотр"></span>
                             <p class="shedule-card__score">22&nbsp;:&nbsp;22</p>
-                            <span class="shedule-card__icon icon icon_type_location" aria-label="Место проведения"></span>
+                            <span
+                                class="shedule-card__icon icon icon_type_location"
+                                aria-label="Место проведения"
+                            ></span>
                         </div>
                         <p class="shedule-card__datetime">01.04.2023 | 15:00</p>
                     </div>
                     <div class="team-card team-card_type_reverse shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">Спортивный клуб "Искра" арм. девушки</h3>
                             <p class="team-card__text">ГБПОУ КСУ № 3</p>
@@ -96,7 +120,12 @@
                 </li>
                 <li class="shedule-card">
                     <div class="team-card shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">ШСК “олимпиец”</h3>
                             <p class="team-card__text">Школа</p>
@@ -106,39 +135,150 @@
                         <div class="shedule-card__panel">
                             <span class="shedule-card__icon icon icon_type_camera" aria-label="Просмотр"></span>
                             <p class="shedule-card__score">22&nbsp;:&nbsp;22</p>
-                            <span class="shedule-card__icon icon icon_type_location" aria-label="Место проведения"></span>
+                            <span
+                                class="shedule-card__icon icon icon_type_location"
+                                aria-label="Место проведения"
+                            ></span>
                         </div>
                         <p class="shedule-card__datetime">01.04.2023 | 15:00</p>
                     </div>
                     <div class="team-card team-card_type_reverse shedule-card__team">
-                        <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                        <img
+                            loading="lazy"
+                            class="team-card__image"
+                            src="./images/no-image.png"
+                            alt="Изображение школы"
+                        />
                         <div class="team-card__content">
                             <h3 class="team-card__title">ШСК “олимпиец”</h3>
                             <p class="team-card__text">Школа</p>
                         </div>
                     </div>
                 </li>
-            }
-            @@if(title === 'Отборочный этап') {
+            </ul>
+            } @@if(title === 'Отборочный этап') {
+            <form class="form" action="" name="sport-type">
+                <button type="button" class="button button_theme_main">Итоговая таблица</button>
+                <div class="form__item form__item_align_end">
+                    <div class="tooltip">
+                        <button
+                            class="button-icon tooltip__icon icon icon_type_info"
+                            type="button"
+                            aria-label="Узнать подроюнее"
+                        ></button>
+                        <div class="tooltip__wrapper"></div>
+                    </div>
+                    <div class="select-field select-field_theme_grey">
+                        <select class="select-field__select" name="" id="">
+                            <option value="" selected disabled>Выберите межрайон</option>
+                            <option value="">Общая таблица</option>
+                            <option value="">1 межрайон</option>
+                            <option value="">2 межрайон</option>
+                        </select>
+                        <div class="select-field__field">
+                            Общая таблица
+                            <span class="select-field__icon icon icon_type_arrow-right"></span>
+                        </div>
+                        <ul class="select-field__list">
+                            <li><p class="select-field__text">Общая таблица</p></li>
+                            <li><p class="select-field__text">1 межрайон</p></li>
+                            <li><p class="select-field__text">2 межрайон</p></li>
+                            <li><p class="select-field__text">3 межрайон</p></li>
+                            <li><p class="select-field__text">4 межрайон</p></li>
+                            <li><p class="select-field__text">5 межрайон</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <h3 class="page__title">Итоговая таблица</h3>
+            <ul class="page__card-deck page__card-deck_size_exlarge">
                 <li class="team-card team-card_content_rating">
-                    <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
                     <span class="team-card__rating">1</span>
                     <div class="team-card__content">
-                        <h3 class="team-card__title">ШСК “олимпиец”</h3>
-                        <p class="team-card__text">Школа</p>
+                        <h3 class="team-card__title">Спортивный клуб " Искра" арм. юноши</h3>
+                        <p class="team-card__text">ГБПОУ КСУ № 3</p>
                     </div>
                 </li>
-            }
-            @@if(title === 'Финальный этап') {
                 <li class="team-card team-card_content_rating">
-                    <img class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <span class="team-card__rating">2</span>
+                    <div class="team-card__content">
+                        <h3 class="team-card__title">ССК Триумф_Инваспорт_армрестлинг</h3>
+                        <p class="team-card__text">ГБПОУ ОК "Юго-Запад"</p>
+                    </div>
+                </li>
+                <li class="team-card team-card_content_rating">
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <span class="team-card__rating">3</span>
+                    <div class="team-card__content">
+                        <h3 class="team-card__title">Инваспорт Армрестлинг 2023</h3>
+                        <p class="team-card__text">ГБПОУ ПК им. П.А. Овчинникова</p>
+                    </div>
+                </li>
+            </ul>
+            } @@if(title === 'Финальный этап') {
+            <form class="form" action="" name="sport-type">
+                <button type="button" class="button button_theme_main">Итоговая таблица</button>
+                <div class="form__item form__item_align_end">
+                    <div class="tooltip">
+                        <button
+                            class="button-icon tooltip__icon icon icon_type_info"
+                            type="button"
+                            aria-label="Узнать подроюнее"
+                        ></button>
+                        <div class="tooltip__wrapper"></div>
+                    </div>
+                    <div class="select-field select-field_theme_grey">
+                        <select class="select-field__select" name="" id="">
+                            <option value="" selected disabled>Выберите межрайон</option>
+                            <option value="">Общая таблица</option>
+                            <option value="">1 межрайон</option>
+                            <option value="">2 межрайон</option>
+                        </select>
+                        <div class="select-field__field">
+                            Общая таблица
+                            <span class="select-field__icon icon icon_type_arrow-right"></span>
+                        </div>
+                        <ul class="select-field__list">
+                            <li><p class="select-field__text">Общая таблица</p></li>
+                            <li><p class="select-field__text">1 межрайон</p></li>
+                            <li><p class="select-field__text">2 межрайон</p></li>
+                            <li><p class="select-field__text">3 межрайон</p></li>
+                            <li><p class="select-field__text">4 межрайон</p></li>
+                            <li><p class="select-field__text">5 межрайон</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <h3 class="page__title">Финальный этап</h3>
+            <ul class="page__card-deck page__card-deck_size_exlarge">
+                <li class="team-card team-card_content_rating">
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
                     <span class="team-card__rating">1</span>
                     <div class="team-card__content">
-                        <h3 class="team-card__title">ШСК “олимпиец”</h3>
-                        <p class="team-card__text">Школа</p>
+                        <h3 class="team-card__title">Спортивный клуб " Искра" арм. юноши</h3>
+                        <p class="team-card__text">ГБПОУ КСУ № 3</p>
                     </div>
                 </li>
+                <li class="team-card team-card_content_rating">
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <span class="team-card__rating">2</span>
+                    <div class="team-card__content">
+                        <h3 class="team-card__title">ССК Триумф_Инваспорт_армрестлинг</h3>
+                        <p class="team-card__text">ГБПОУ ОК "Юго-Запад"</p>
+                    </div>
+                </li>
+                <li class="team-card team-card_content_rating">
+                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
+                    <span class="team-card__rating">3</span>
+                    <div class="team-card__content">
+                        <h3 class="team-card__title">Инваспорт Армрестлинг 2023</h3>
+                        <p class="team-card__text">ГБПОУ ПК им. П.А. Овчинникова</p>
+                    </div>
+                </li>
+            </ul>
             }
-        </ul>
+        </div>
     </div>
-</div>
+</article>

@@ -1,0 +1,17 @@
+.tooltip {
+    &__icon {
+        min-inline-size: 32px;
+        max-inline-size: 32px;
+        block-size: 32px;
+
+        &::before {
+            inline-size: 32px;
+            block-size: 32px;
+            background-color: var(--main-color);
+        }
+    }
+
+    &__wrapper {
+        display: none;
+    }
+}

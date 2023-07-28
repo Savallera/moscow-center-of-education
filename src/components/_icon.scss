@@ -11,6 +11,9 @@
     &_type_home::before {
         mask-image: url("../images/home.svg");
     }
+    &_type_info::before {
+        mask-image: url("../images/question-circle.svg");
+    }
     &_type_flag::before {
         mask-image: url("../images/flag.svg");
     }

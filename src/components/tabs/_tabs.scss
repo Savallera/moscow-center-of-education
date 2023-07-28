@@ -21,7 +21,10 @@
         min-block-size: 35px;
         padding: 8px 20px;
         text-align: center;
-        @extend %main-italic-text;
+        font-size: var(--main-text-size);
+        font-style: italic;
+        font-weight: 800;
+        line-height: 1;
         background-color: #fff;
         border-radius: 10px;
         transition: background-color 0.25s ease-in, color 0.25s ease-in, opacity 0.25s ease-in;
