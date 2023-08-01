@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include("../components/head/head.html", { "title": "Рейтинги" })
+    <body>
+        <div class="page">
+            @@include("../components/header/header.html", {"title": "Рейтинги"})
+            <main class="page__content">
+                @@include("../components/content-header/content-header.html")
+                <!-- Секция с рейтингами -->
+                <section class="page__section">
+                    <h2 class="page__title">Рейтинги</h2>
+                    @@include('../components/scrolling-wrapper/scrolling-wrapper-rating.html')
+                </section>
+            </main>
+            @@include("../components/footer/footer.html")
+        </div>
+    </body>
+</html>
