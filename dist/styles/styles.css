@@ -566,6 +566,15 @@ a {
   opacity: 0;
 }
 
+.sport-icon_type_urban-sport::before {
+  background-image: url(../images/urban-sport_theme_light.svg);
+}
+
+.sport-icon_type_urban-sport::after {
+  background-image: url(../images/urban-sport_theme_dark.svg);
+  opacity: 0;
+}
+
 .sport-icon_theme_dark::before,
 .sport-card:hover .sport-card__sport-icon::before {
   opacity: 0;
