@@ -33,7 +33,7 @@ export default () => {
             .pipe(cssImport())
             // .pipe(webpCss())
             .pipe(autoprefixer())
-            .pipe(groupCssMediaQueries())
+            // .pipe(groupCssMediaQueries())
             .pipe(gulp.dest(path.scss.dest))
             .pipe(rename({ suffix: ".min" }))
             .pipe(size({ title: "До сжатия" }))

@@ -11,6 +11,59 @@
     grid-auto-flow: dense;
     gap: 15px;
 
+    &__image {
+        min-inline-size: 50px;
+        max-inline-size: 50px;
+        inline-size: 50px;
+        block-size: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    &__rating {
+        @extend %card-style;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        inline-size: clamp(36px, 6vi, 60px);
+        block-size: clamp(36px, 6vi, 60px);
+        @extend %title;
+        color: var(--main-text-color);
+    }
+
+    &__points {
+        @extend %card-style;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        inline-size: 30px;
+        block-size: 30px;
+        font-size: var(--main-text-size);
+        font-weight: 800;
+        color: var(--main-text-color);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__title {
+        @extend %main-text;
+        font-weight: 800;
+
+        // Если название длинное, где вместо пробелов нижние подчеркивания
+        word-break: break-word;
+    }
+
+    &__text {
+        @extend %small-caption-text;
+        opacity: 0.5;
+    }
 
     // Содержит третью колонку с рейтингом
     &_content_rating {
@@ -21,7 +74,53 @@
         }
     }
 
-    // Расположена в блока Рейтинги
+    // Содержит колонку с рейтингом и статистикой игр
+    &_content_rating-stats {
+        grid-template-columns: auto auto 1fr;
+
+        .team-card__rating {
+            grid-area: 1/1/2/2;
+        }
+
+        .team-card__stats {
+            grid-area: 2/3/3/4;
+        }
+
+        @include media(md) {
+            grid-template-columns: auto auto 1fr auto;
+
+            .team-card__stats {
+                grid-area: unset;
+                margin-inline-end: 5vi;
+            }
+        }
+    }
+
+    // Расположен в аккордионе
+    &_place_accordion {
+        inline-size: 100%;
+        padding: 0;
+    }
+
+    // Расположен в турнирной таблице
+    &_place_playoff {
+        padding: 0;
+        grid-template-columns: auto 1fr auto;
+
+        .team-card__image {
+            min-inline-size: 30px;
+            max-inline-size: 30px;
+            inline-size: 30px;
+            block-size: 30px;
+        }
+
+        .team-card__title {
+            @extend %small-caption-text;
+            @include clamp(2);
+        }
+    }
+
+    // Расположена в блоке Рейтинги
     &_place_rating {
         .team-card__image {
             grid-area: 1/1/2/2;
@@ -48,46 +147,5 @@
         .team-card__image {
             order: 1;
         }
-    }
-
-    &__image {
-        min-inline-size: 50px;
-        max-inline-size: 50px;
-        inline-size: 50px;
-        block-size: 50px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 2px solid #fff;
-    }
-
-    &__rating {
-        @extend %card-style;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        inline-size: clamp(36px, 6vi, 60px);
-        block-size: clamp(36px, 6vi, 60px);
-        @extend %title;
-        color: var(--main-text-color);
-    }
-
-    &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    &__title {
-        @extend %main-text;
-        font-weight: 800;
-
-        // Если название длинное, где вместо пробелов нижние подчеркивания
-        word-break: break-word;
-    }
-
-    &__text {
-        @extend %small-caption-text;
-        opacity: 0.5;
     }
 }

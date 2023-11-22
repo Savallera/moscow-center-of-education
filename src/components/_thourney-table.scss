@@ -1,0 +1,102 @@
+.thourney-table {
+    &__column {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+
+        &:not(:last-child):nth-of-type(2) {
+            .thourney-table__item {
+                --height: 150%;
+                --gap: 20px;
+            }
+        }
+
+        &:not(:last-child):nth-of-type(3) {
+            .thourney-table__item {
+                --height: 250%;
+                --gap: 40px;
+            }
+        }
+
+        &:not(:last-child):nth-of-type(4) {
+            .thourney-table__item {
+                --height: 470%;
+                --gap: 60px;
+            }
+        }
+    }
+
+    &__column-title {
+        padding: 8px 20px;
+        text-align: center;
+        font-size: var(--main-text-size);
+        font-style: italic;
+        font-weight: 800;
+        line-height: 1;
+        background-color: var(--main-color);
+        color: #fff;
+        border-radius: 10px;
+    }
+
+    &__items {
+        height: 100%;
+
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    &__item {
+        --height: 100%;
+        --gap: 10px;
+
+        margin-block: auto;
+        padding: 10px;
+        background-color: var(--main-color);
+        color: #fff;
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        position: relative;
+
+        &:not(:only-child):nth-child(odd) {
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 50% auto auto 100%;
+                inline-size: 10px;
+                block-size: var(--height);
+                border: 2px solid var(--main-color);
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0 -20px auto auto;
+                inline-size: 10px;
+                block-size: calc(var(--height) + var(--gap));
+                border-bottom: 2px solid var(--main-color);
+            }
+        }
+        &:not(:only-child):nth-child(even) {
+            &::before {
+                content: "";
+                position: absolute;
+                inset: auto auto 50% 100%;
+                inline-size: 10px;
+                block-size: var(--height);
+                border: 2px solid var(--main-color);
+                border-left-color: transparent;
+                border-top-color: transparent;
+            }
+        }
+    }
+
+    &__item-datetime {
+        @extend %small-caption-text;
+    }
+}

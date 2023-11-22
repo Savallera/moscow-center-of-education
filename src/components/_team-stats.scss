@@ -1,0 +1,27 @@
+.team-stats {
+    display: flex;
+    gap: 10px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label {
+        @extend %main-text;
+    }
+
+    &__value {
+        @extend %card-style;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        inline-size: clamp(30px, 3.5vi, 35px);
+        block-size: clamp(30px, 3.5vi, 35px);
+        font-size: var(--main-text-size);
+        font-weight: 800;
+        color: var(--main-text-color);
+    }
+}

@@ -50,4 +50,8 @@
     }
 
     // &__container {}
+
+    &_theme_primary .tabs__item-link:not(.tabs__item-link_active) {
+        background-color: var(--grey-color);
+    }
 }

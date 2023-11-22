@@ -1,26 +1,6 @@
 .accordion {
     @extend %card-style;
 
-    &_open {
-        .accordion__caption {
-            border-color: var(--grey-color);
-        }
-
-        .accordion__button {
-            background-color: var(--main-color);
-
-            &::before {
-                mask-image: url(../images/arrow-up.svg);
-                background-color: #fff;
-                mask-size: 40%;
-            }
-        }
-
-        .accordion__container {
-            display: block;
-            opacity: 1;
-        }
-    }
     &__caption {
         border-radius: 10px;
         border-bottom: 2px solid #fff;
@@ -32,6 +12,7 @@
         gap: 15px;
         padding: 15px;
     }
+
     &__button {
         flex: none;
 
@@ -53,6 +34,14 @@
             mask-size: 50%;
         }
 
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: 1px solid black;
+        }
+
         &:hover {
             opacity: 0.75;
         }
@@ -61,11 +50,58 @@
             transform: translateY(1px);
         }
     }
+
     &__container {
         padding: 15px;
 
         display: none;
         opacity: 0;
         transition: opacity 0.35s ease-in;
+    }
+
+    &_theme_primary {
+        background-color: var(--grey-color);
+
+        .accordion__caption {
+            background-color: var(--main-color);
+        }
+
+        .accordion__button {
+            margin-block-start: 5px;
+        }
+
+        .accordion__container {
+            background-color: var(--grey-color);
+            border-radius: 0 0 10px 10px;
+        }
+    }
+
+    &_open {
+        .accordion__caption {
+            border-color: var(--grey-color);
+        }
+
+        .accordion__button {
+            background-color: var(--main-color);
+
+            &::before {
+                mask-image: url(../images/arrow-up.svg);
+                background-color: #fff;
+                mask-size: 40%;
+            }
+        }
+
+        .accordion__container {
+            display: block;
+            opacity: 1;
+        }
+
+        &.accordion_theme_primary .accordion__button {
+            background-color: var(--grey-color);
+
+            &::before {
+                background-color: var(--main-color);
+            }
+        }
     }
 }

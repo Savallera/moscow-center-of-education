@@ -1,5 +1,6 @@
 .scrolling-wrapper {
     padding-block-end: 25px;
+    margin-block-end: 25px;
     display: flex;
     width: 100%;
     gap: 15px;
@@ -24,6 +25,27 @@
             flex: 0 0 calc((100% - 30px) / 3);
             min-inline-size: calc((100% - 30px) / 3);
             max-inline-size: calc((100% - 30px) / 3);
+        }
+    }
+
+    &_columns_two > li {
+        @include media(lg) {
+            flex: 0 0 calc((100% - 15px) / 2);
+            min-inline-size: calc((100% - 15px) / 2);
+            max-inline-size: calc((100% - 15px) / 2);
+        }
+    }
+
+    &_columns_four > li {
+        @include media(md) {
+            flex: 0 0 calc((100% - 30px) / 3);
+            min-inline-size: calc((100% - 30px) / 3);
+            max-inline-size: calc((100% - 30px) / 3);
+        }
+        @include media(lg) {
+            flex: 0 0 calc((100% - 45px) / 4);
+            min-inline-size: calc((100% - 45px) / 4);
+            max-inline-size: calc((100% - 45px) / 4);
         }
     }
 }
