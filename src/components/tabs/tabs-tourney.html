@@ -1,0 +1,39 @@
+<div class="tabs tabs_theme_primary">
+    <ul class="tabs__list">
+        <li class="tabs__item">
+            @@if(title === 'Групповой этап') {
+            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-tourney.html">
+                <span class="tabs__item-icon"></span>
+                Групповой этап
+            </a>
+            } @@if(title !== 'Групповой этап') {
+            <a class="tabs__item-link" href="./detail-event-tourney.html">
+                <span class="tabs__item-icon"></span>
+                Групповой этап
+            </a>
+            }
+        </li>
+        <li class="tabs__item">
+            @@if(title === 'Плей-офф') {
+            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-tourney-playoff.html">
+                <span class="tabs__item-icon"></span>
+                Плей-офф
+            </a>
+            } @@if(title !== 'Плей-офф') {
+            <a class="tabs__item-link" href="./detail-event-tourney-playoff.html">
+                <span class="tabs__item-icon"></span>
+                Плей-офф
+            </a>
+            }
+        </li>
+    </ul>
+    <div class="tabs__container">
+        @@if(title === 'Групповой этап') {
+            @@include('../accordion/accordion-team-card.html', { 'title': 'Спортивный клуб " Искра" арм. юноши',
+            'school': 'ГБПОУ КСУ № 3', 'rates': '1', })
+
+        } @@if(title === 'Плей-офф') {
+            @@include('../scrolling-wrapper/scrolling-wrapper-playoff.html')
+        }
+    </div>
+</div>

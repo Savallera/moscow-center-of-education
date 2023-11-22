@@ -15,27 +15,27 @@
         </li>
         <li class="tabs__item">
             @@if(title === 'Отборочный этап') {
-            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-stage.html">
+            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-qualifying.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Отборочный этап
             </a>
             } @@if(title !== 'Отборочный этап') {
-            <a class="tabs__item-link" href="./detail-event-stage.html">
+            <a class="tabs__item-link" href="./detail-event-qualifying.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
                 Отборочный этап
             </a>
             }
         </li>
         <li class="tabs__item">
-            @@if(title === 'Финальный этап') {
-            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-final.html">
+            @@if(title === 'Турнирная таблица') {
+            <a class="tabs__item-link tabs__item-link_active" href="./detail-event-tourney.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
-                Финальный этап
+                Турнирная таблица
             </a>
-            } @@if(title !== 'Финальный этап') {
-            <a class="tabs__item-link" href="./detail-event-final.html">
+            } @@if(title !== 'Турнирная таблица') {
+            <a class="tabs__item-link" href="./detail-event-tourney.html">
                 <span class="tabs__item-icon icon icon_type_flag-variant"></span>
-                Финальный этап
+                Турнирная таблица
             </a>
             }
         </li>
@@ -217,68 +217,30 @@
                     </div>
                 </li>
             </ul>
-            } @@if(title === 'Финальный этап') {
-            <form class="form" action="" name="sport-type">
-                <button type="button" class="button button_theme_main">Итоговая таблица</button>
+            } @@if(title === 'Турнирная таблица') {
+            <form class="form" action="" name="event-list">
+                <h3 class="page__title">Турнирная таблица</h3>
                 <div class="form__item form__item_align_end">
-                    <div class="tooltip">
-                        <button
-                            class="button-icon tooltip__icon icon icon_type_info"
-                            type="button"
-                            aria-label="Узнать подроюнее"
-                        ></button>
-                        <div class="tooltip__wrapper"></div>
-                    </div>
                     <div class="select-field select-field_theme_grey">
                         <select class="select-field__select" name="" id="">
-                            <option value="" selected disabled>Выберите межрайон</option>
-                            <option value="">Общая таблица</option>
-                            <option value="">1 межрайон</option>
-                            <option value="">2 межрайон</option>
+                            <option value="" selected disabled>Выберите группу</option>
+                            <option value="">Группа 1</option>
+                            <option value="">Группа 2</option>
+                            <option value="">Группа 3</option>
                         </select>
                         <div class="select-field__field">
-                            Общая таблица
+                            Выберите группу
                             <span class="select-field__icon icon icon_type_arrow-right"></span>
                         </div>
                         <ul class="select-field__list">
-                            <li><p class="select-field__text">Общая таблица</p></li>
-                            <li><p class="select-field__text">1 межрайон</p></li>
-                            <li><p class="select-field__text">2 межрайон</p></li>
-                            <li><p class="select-field__text">3 межрайон</p></li>
-                            <li><p class="select-field__text">4 межрайон</p></li>
-                            <li><p class="select-field__text">5 межрайон</p></li>
+                            <li><p class="select-field__text">Группа 1</p></li>
+                            <li><p class="select-field__text">Группа 2</p></li>
+                            <li><p class="select-field__text">Группа 3</p></li>
                         </ul>
                     </div>
                 </div>
             </form>
-            <h3 class="page__title">Финальный этап</h3>
-            <ul class="page__card-deck page__card-deck_size_exlarge">
-                <li class="team-card team-card_content_rating">
-                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
-                    <span class="team-card__rating">1</span>
-                    <div class="team-card__content">
-                        <h3 class="team-card__title">Спортивный клуб " Искра" арм. юноши</h3>
-                        <p class="team-card__text">ГБПОУ КСУ № 3</p>
-                    </div>
-                </li>
-                <li class="team-card team-card_content_rating">
-                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
-                    <span class="team-card__rating">2</span>
-                    <div class="team-card__content">
-                        <h3 class="team-card__title">ССК Триумф_Инваспорт_армрестлинг</h3>
-                        <p class="team-card__text">ГБПОУ ОК "Юго-Запад"</p>
-                    </div>
-                </li>
-                <li class="team-card team-card_content_rating">
-                    <img loading="lazy" class="team-card__image" src="./images/no-image.png" alt="Изображение школы" />
-                    <span class="team-card__rating">3</span>
-                    <div class="team-card__content">
-                        <h3 class="team-card__title">Инваспорт Армрестлинг 2023</h3>
-                        <p class="team-card__text">ГБПОУ ПК им. П.А. Овчинникова</p>
-                    </div>
-                </li>
-            </ul>
-            }
+            @@include("../tabs/tabs-tourney.html", {'title': '@@subtitle'}) }
         </div>
     </div>
 </article>
