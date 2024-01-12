@@ -1956,6 +1956,12 @@ a {
       -ms-flex-order: 1;
           order: 1;
 }
+.team-card_hightlight {
+  -webkit-transition: 0.35s ease-in;
+  transition: 0.35s ease-in;
+  background-color: var(--accent-color);
+  outline: 5px solid var(--accent-color);
+}
 
 .team-stats {
   display: -webkit-box;
